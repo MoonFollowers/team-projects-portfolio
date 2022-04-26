@@ -42,7 +42,6 @@ game_font = pygame.font.Font(None, 150)
 # 색상값
 WHITE = (255,255,255)
 
-
 #   체스 보드
 board = pygame.image.load('img/ChessBoard.png')
 #   플레이어 피스
@@ -84,17 +83,18 @@ turn = pygame.image.load('img/TURN.png')
 item = pygame.image.load('img/ITEM.png')
 move = pygame.image.load('img/move.png')
 
+# 배경음 세팅
 pygame.mixer.init()
 #   배경음
 pygame.mixer.music.load('sound/bgm.mp3')
 pygame.mixer.music.set_volume(0.3)
 pygame.mixer.music.play(-1)
-
 #   효과음
 sound_move = pygame.mixer.Sound('sound/se_move.wav')
 sound_crash = pygame.mixer.Sound('sound/crash.wav')
 
 
+# 함수
 def set_location_player(x, y):
     global player_location, player_button, player_x, player_y
     player_location = [x, y]
@@ -112,7 +112,7 @@ def set_location_enemy(piece_x, piece_y):
 
     return enemy_x, enemy_y
 
-
+# 피스 초기 좌표 위치 설정
 player_x = set_location_player(6, 5)[0]
 player_y = set_location_player(6, 5)[1]
 
@@ -237,7 +237,6 @@ while running:
             #     print(move_preview)
 
     # 3. 게임 캐릭터 위치 정의
-    #   좌표 값 넣어서 이동시키기
 
     # 4. 충돌 처리
     player_button = pygame.Rect(player_x, player_y, player_width, player_height)
@@ -259,7 +258,8 @@ while running:
         attck_enemy(key)
 
     # 게임 폰트
-    move_timer = game_font.render(str(stage_count), True, WHITE)
+    # str.zfill(자릿수) 로 0 채워넣어 모양 만들기
+    move_timer = game_font.render(str(stage_count).zfill(2), True, WHITE)
 
     # 5. 화면에 그리기
     screen.blit(board, (200, 0))
