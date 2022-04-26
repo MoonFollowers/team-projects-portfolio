@@ -12,10 +12,20 @@ pygame.display.set_caption("Battle Chess")
 clock = pygame.time.Clock()
 
 # 2. 사용자 게임 초기화 (배경화면, 게임이미지, 좌표, 폰트, 속도)
+#   cell size
+margin_dashboard = 200
+cell = 100
+grid_location = [0,0]
 #   체스 보드
 board = pygame.image.load('img/ChessBoard.png')
 #   플레이어 피스
 player = pygame.image.load('img/Player.png')
+player_size = player.get_size()
+player_width = player_size[0]
+player_height = player_size[1]
+player_x = margin_dashboard + (grid_location[0] * cell) + (cell - player_width)
+player_y = (grid_location[1] * cell) + + (cell - player_height)
+
 #   에너미 피스
 enemy = pygame.image.load('img/Enemy.png')
 #   킹 피스
@@ -39,13 +49,11 @@ stage_5 = pygame.image.load('img/Stage_5.png')
 turn = pygame.image.load('img/TURN.png')
 item = pygame.image.load('img/ITEM.png')
 
-
 pygame.mixer.init()
 #   배경음
 pygame.mixer.music.load('sound/bgm.mp3')
 pygame.mixer.music.play(-1)
 #   효과음
-
 
 #   이벤트 루프
 running = True  # 게임이 진행중인가?
@@ -58,24 +66,25 @@ while running:
             running = False  # 게임이 진행중이 아님
 
     # 3. 게임 캐릭터 위치 정의
+    grid_location = [1,5]
+    player_x = margin_dashboard + (grid_location[0] * cell) + (cell - player_width)
+    player_y = (grid_location[1] * cell) + + (cell - player_height)
 
     # 4. 충돌 처리
 
     # 5. 화면에 그리기
-    screen.blit(board, (200,0))
-    screen.blit(title, (0,0))
+    screen.blit(board, (200, 0))
+    screen.blit(title, (0, 0))
     screen.blit(whitegray, (0, 200))
-    screen.blit(gray, (0,300))
-    screen.blit(whitegray, (0,500))
+    screen.blit(gray, (0, 300))
+    screen.blit(whitegray, (0, 500))
     screen.blit(turn, (60, 530))
     screen.blit(gray, (0, 600))
     screen.blit(whitegray, (0, 800))
-    screen.blit(item, (60,830))
-    screen.blit(wood, (0,900))
-    screen.blit(pause, (58,907))
-
-
-
+    screen.blit(item, (60, 830))
+    screen.blit(wood, (0, 900))
+    screen.blit(pause, (58, 907))
+    screen.blit(player, (player_x, player_y))
 
     pygame.display.update()  # 게임 화면을 다시 그리기!
 
