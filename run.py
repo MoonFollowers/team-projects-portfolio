@@ -66,6 +66,7 @@ stage_4 = pygame.image.load('img/Stage_4.png')
 stage_5 = pygame.image.load('img/Stage_5.png')
 turn = pygame.image.load('img/TURN.png')
 item = pygame.image.load('img/ITEM.png')
+move = pygame.image.load('img/move.png')
 
 pygame.mixer.init()
 #   배경음
@@ -94,10 +95,7 @@ def set_location_enemy(piece_x, piece_y):
 
 ### pos에 해당하는 버튼 확인
 def check_buttons(pos):
-
-
     if player_button.collidepoint(pos):
-
         def show_move_pointer():
             global move_up, move_down, move_left, move_right
 
@@ -106,7 +104,10 @@ def check_buttons(pos):
             move_right += 100
             move_left -= 100
 
-            up_rect = pygame.Rect()
+            screen.blit(move, (player_x, player_y + move_up))
+            screen.blit(move, (player_x, player_y + move_down))
+            screen.blit(move, (player_x + move_right, player_y))
+            screen.blit(move, (player_x + move_left, player_y + move_up))
 
 
 #   이벤트 루프
@@ -123,8 +124,8 @@ while running:
             click_pos = pygame.mouse.get_pos()  # get_pos()으로 클릭한 위치 값 받아오기
             print(click_pos)
 
-    # if click_pos:
-    #     check_buttons(click_pos)
+    if click_pos:
+        check_buttons(click_pos)
 
     # 3. 게임 캐릭터 위치 정의
     #   좌표 값 넣어서 이동시키기
