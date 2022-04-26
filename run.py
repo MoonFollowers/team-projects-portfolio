@@ -30,6 +30,21 @@ whitegray = pygame.image.load('img/grayback.png')
 title = pygame.image.load('img/Title.png')
 #   일시정지 테두리
 wood = pygame.image.load('img/wood.png')
+#   스테이지
+stage_1 = pygame.image.load('img/Stage_1.png')
+stage_2 = pygame.image.load('img/Stage_2.png')
+stage_3 = pygame.image.load('img/Stage_3.png')
+stage_4 = pygame.image.load('img/Stage_4.png')
+stage_5 = pygame.image.load('img/Stage_5.png')
+turn = pygame.image.load('img/TURN.png')
+item = pygame.image.load('img/ITEM.png')
+
+
+pygame.mixer.init()
+#   배경음
+pygame.mixer.music.load('sound/bgm.mp3')
+pygame.mixer.music.play(-1)
+#   효과음
 
 
 #   이벤트 루프
@@ -52,10 +67,13 @@ while running:
     screen.blit(whitegray, (0, 200))
     screen.blit(gray, (0,300))
     screen.blit(whitegray, (0,500))
+    screen.blit(turn, (60, 530))
     screen.blit(gray, (0, 600))
     screen.blit(whitegray, (0, 800))
+    screen.blit(item, (60,830))
     screen.blit(wood, (0,900))
     screen.blit(pause, (58,907))
+
 
 
 
