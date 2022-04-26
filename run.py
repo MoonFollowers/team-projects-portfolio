@@ -82,6 +82,14 @@ enemy4_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) 
 enemy4_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
 enemy4_button = pygame.Rect(enemy4_x, enemy4_y, enemy_width, enemy_height)
 
+enemy5_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
+enemy5_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
+enemy5_button = pygame.Rect(enemy5_x, enemy5_y, enemy_width, enemy_height)
+
+enemy6_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
+enemy6_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
+enemy6_button = pygame.Rect(enemy6_x, enemy6_y, enemy_width, enemy_height)
+
 # 킹 피스
 king = pygame.image.load('img/King.png')
 king_size = king.get_size()
@@ -155,20 +163,26 @@ def set_location_king(x, y):
 
 
 # 피스 초기 좌표 위치 설정
-player_x = set_location_player(4, 7)[0]
-player_y = set_location_player(4, 7)[1]
+player_x = set_location_player(4, 9)[0]
+player_y = set_location_player(4, 9)[1]
 
 enemy_x = set_location_enemy(0, 0)[0]
 enemy_y = set_location_enemy(0, 0)[1]
 
-enemy2_x = set_location_enemy(9, 0)[0]
-enemy2_y = set_location_enemy(9, 0)[1]
+enemy2_x = set_location_enemy(8, 0)[0]
+enemy2_y = set_location_enemy(8, 0)[1]
 
 enemy3_x = set_location_enemy(2, 2)[0]
 enemy3_y = set_location_enemy(2, 2)[1]
 
 enemy4_x = set_location_enemy(7, 2)[0]
 enemy4_y = set_location_enemy(7, 2)[1]
+
+enemy5_x = set_location_enemy(5, 5)[0]
+enemy5_y = set_location_enemy(5,5)[1]
+
+enemy6_x = set_location_enemy(7,4)[0]
+enemy6_y = set_location_enemy(7,4)[1]
 
 king_x = set_location_enemy(5, 0)[0]
 king_y = set_location_enemy(5, 0)[1]
@@ -285,6 +299,47 @@ def attck_enemy4(key):
         print('잘못된 시도입니다 : attack_enemy()')
     return player_x, player_y
 
+def attck_enemy5(key):
+    # 캐릭터 피스는 이동하려는 모션
+    print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
+    global player_x, player_y, sound_crash, stage_count, enemy5_x
+    sound_crash.play()
+    if key == 'up':
+        player_y += 100
+        enemy5_x = -500
+    elif key == 'down':
+        player_y -= 100
+        enemy5_x = -500
+    elif key == 'left':
+        player_x += 100
+        enemy5_x = -500
+    elif key == 'right':
+        player_x -= 100
+        enemy5_x = -500
+    else:
+        print('잘못된 시도입니다 : attack_enemy()')
+    return player_x, player_y
+
+def attck_enemy6(key):
+    # 캐릭터 피스는 이동하려는 모션
+    print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
+    global player_x, player_y, sound_crash, stage_count, enemy6_x
+    sound_crash.play()
+    if key == 'up':
+        player_y += 100
+        enemy6_x = -500
+    elif key == 'down':
+        player_y -= 100
+        enemy6_x = -500
+    elif key == 'left':
+        player_x += 100
+        enemy6_x = -500
+    elif key == 'right':
+        player_x -= 100
+        enemy6_x = -500
+    else:
+        print('잘못된 시도입니다 : attack_enemy()')
+    return player_x, player_y
 
 def attck_king(key):
     # 캐릭터 피스는 이동하려는 모션
@@ -335,6 +390,8 @@ def display_game():
     screen.blit(enemy, (enemy2_x, enemy2_y))
     screen.blit(enemy, (enemy3_x, enemy3_y))
     screen.blit(enemy, (enemy4_x, enemy4_y))
+    screen.blit(enemy, (enemy5_x, enemy5_y))
+    screen.blit(enemy, (enemy6_x, enemy6_y))
     screen.blit(king, (king_x, king_y))
 
 
@@ -440,19 +497,7 @@ def hard_code_AI(count):
         enemy3_y = set_location_enemy(4, 2)[1]
         return enemy3_x, enemy3_y
 
-    # elif count == 25:
-    # pass
-    # elif count == 24:
-    # pass
-    # elif count == 23:
-    # pass
-    # elif count == 22:
-    # pass
-    # elif count == 21:
-    # pass
-    # elif count == 20:
-    # pass
-
+   
 #   이벤트 루프
 
 running = True  # 게임이 진행중인가?
@@ -493,6 +538,8 @@ while running:
     enemy2_button = pygame.Rect(enemy2_x, enemy2_y, enemy_width, enemy_height)
     enemy3_button = pygame.Rect(enemy3_x, enemy3_y, enemy_width, enemy_height)
     enemy4_button = pygame.Rect(enemy4_x, enemy4_y, enemy_width, enemy_height)
+    enemy5_button = pygame.Rect(enemy5_x, enemy5_y, enemy_width, enemy_height)
+    enemy6_button = pygame.Rect(enemy6_x, enemy6_y, enemy_width, enemy_height)
     king_button = pygame.Rect(king_x, king_y, king_width, king_height)
 
     # print(f'player_button: {player_button}, enemy_button: {enemy_button}')
@@ -521,6 +568,12 @@ while running:
     elif player_button.colliderect(enemy4_button):
         print('피스 충돌')
         attck_enemy4(key)
+    elif player_button.colliderect(enemy5_button):
+        print('피스 충돌')
+        attck_enemy5(key)
+    elif player_button.colliderect(enemy6_button):
+        print('피스 충돌')
+        attck_enemy6(key)
     elif player_button.colliderect(king_button):
         print('피스 충돌')
         attck_king(key)
