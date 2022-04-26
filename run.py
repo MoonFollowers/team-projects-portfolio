@@ -23,11 +23,8 @@ piece_x = 0
 piece_y = 0
 player_location = [piece_x, piece_y]
 enemy_location = [piece_x, piece_y]
-move_up = 0
-move_down = 0
-move_left = 0
-move_right = 0
 click_pos = 0
+move_preview = False
 
 #   체스 보드
 board = pygame.image.load('img/ChessBoard.png')
@@ -78,11 +75,12 @@ pygame.mixer.music.load('sound/bgm.mp3')
 #   효과음
 
 
-def set_location_player(piece_x, piece_y):
-    global player_location
-    player_location = [piece_x, piece_y]
+def set_location_player(x, y):
+    global player_location, player_button, player_x, player_y
+    player_location = [x, y]
     player_x = margin_dashboard + (player_location[0] * cell) + (cell - player_width) / 2
     player_y = (player_location[1] * cell) + (cell - player_height) / 2
+    player_button = pygame.Rect(player_x, player_y, player_width, player_height)
     return [player_x, player_y]
 
 
@@ -91,25 +89,52 @@ def set_location_enemy(piece_x, piece_y):
     enemy_location = [piece_x, piece_y]
     enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
     enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
+
     return enemy_x, enemy_y
 
 
 ### pos에 해당하는 버튼 확인
 def check_buttons(pos):
     if player_button.collidepoint(pos):
-        global move_up, move_down, move_left, move_right
+        global move_preview
 
-        move_up += 100
-        move_down -= 100
-        move_right += 100
-        move_left -= 100
-
-        print(move_up,move_down, move_left, move_right)
-
-        screen.blit(move, (player_x, player_y + move_up))
-        screen.blit(move, (player_x, player_y + move_down))
-        screen.blit(move, (player_x + move_right, player_y))
-        screen.blit(move, (player_x + move_left, player_y + move_up))
+        # if move_preview == False
+        if not move_preview:
+            move_preview = True
+            move_up  = -100
+            move_down  = 100
+            move_right = 100
+            move_left = -100
+            # print(move_up,move_down, move_left, move_right)
+            move_up += player_y
+            move_down += player_y
+            move_right += player_x
+            move_left += player_x
+            # print(move_up, move_down, move_left, move_right)
+            screen.blit(move, (player_x, move_up))
+            screen.blit(move, (player_x, move_down))
+            screen.blit(move, (move_left, player_y))
+            screen.blit(move, (move_right, player_y))
+            pygame.display.update()
+            return move_preview
+        else:
+            move_preview = False
+            move_up = -100
+            move_down = 100
+            move_right = 100
+            move_left = -100
+            # print(move_up,move_down, move_left, move_right)
+            move_up += player_y
+            move_down += player_y
+            move_right += player_x
+            move_left += player_x
+            # print(move_up, move_down, move_left, move_right)
+            screen.blit(king, (player_x, move_up))
+            screen.blit(king, (player_x, move_down))
+            screen.blit(king, (move_left, player_y))
+            screen.blit(king, (move_right, player_y))
+            pygame.display.update()
+            return move_preview
 
 
 #   이벤트 루프
@@ -124,15 +149,16 @@ while running:
 
         if event.type == pygame.MOUSEBUTTONUP:
             click_pos = pygame.mouse.get_pos()  # get_pos()으로 클릭한 위치 값 받아오기
-            print(click_pos)
+            print(click_pos, player_button)
 
-        if click_pos:
-            check_buttons(click_pos)
+            if click_pos:
+                check_buttons(click_pos)
+                print(move_preview)
 
     # 3. 게임 캐릭터 위치 정의
     #   좌표 값 넣어서 이동시키기
-    player_x = set_location_player(5, 5)[0]
-    player_y = set_location_player(5, 5)[1]
+    player_x = set_location_player(6, 5)[0]
+    player_y = set_location_player(6, 5)[1]
 
     enemy_x = set_location_enemy(1, 1)[0]
     enemy_y = set_location_enemy(1, 1)[1]
