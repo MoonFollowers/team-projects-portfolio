@@ -144,14 +144,13 @@ def set_location_enemy(x, y):
     enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
     return enemy_x, enemy_y
 
+
 def set_location_king(x, y):
     global enemy_location
     enemy_location = [x, y]
     enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
     enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
     return enemy_x, enemy_y
-
-
 
 
 # 피스 초기 좌표 위치 설정
@@ -172,6 +171,7 @@ enemy4_y = set_location_enemy(7, 2)[1]
 
 king_x = set_location_enemy(5, 0)[0]
 king_y = set_location_enemy(5, 0)[1]
+
 
 # 플레이어 무브 기능
 def player_move(key):
@@ -216,6 +216,7 @@ def attck_enemy(key):
         print('잘못된 시도입니다 : attack_enemy()')
     return player_x, player_y
 
+
 def attck_enemy2(key):
     # 캐릭터 피스는 이동하려는 모션
     print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
@@ -236,6 +237,7 @@ def attck_enemy2(key):
     else:
         print('잘못된 시도입니다 : attack_enemy()')
     return player_x, player_y
+
 
 def attck_enemy3(key):
     # 캐릭터 피스는 이동하려는 모션
@@ -258,6 +260,7 @@ def attck_enemy3(key):
         print('잘못된 시도입니다 : attack_enemy()')
     return player_x, player_y
 
+
 def attck_enemy4(key):
     # 캐릭터 피스는 이동하려는 모션
     print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
@@ -279,15 +282,16 @@ def attck_enemy4(key):
         print('잘못된 시도입니다 : attack_enemy()')
     return player_x, player_y
 
+
 def attck_king(key):
     # 캐릭터 피스는 이동하려는 모션
     print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
-    global player_x, player_y, sound_crash, stage_count, king_x
+    global player_x, player_y, sound_crash, stage_count, king_x, king_count
     sound_crash.play()
     if key == 'up':
         player_y += 100
         king_x = -500
-        king_count=0
+        king_count = 0
     elif key == 'down':
         player_y -= 100
         king_x = -500
@@ -303,7 +307,6 @@ def attck_king(key):
     else:
         print('잘못된 시도입니다 : attack_enemy()')
     return player_x, player_y
-
 
 
 def display_title():
@@ -329,7 +332,7 @@ def display_game():
     screen.blit(enemy, (enemy2_x, enemy2_y))
     screen.blit(enemy, (enemy3_x, enemy3_y))
     screen.blit(enemy, (enemy4_x, enemy4_y))
-    screen.blit(king, (king_x,king_y))
+    screen.blit(king, (king_x, king_y))
 
 
 ### pos에 해당하는 버튼 확인
@@ -394,6 +397,12 @@ def game_over():
     print('게임을 진짜 종료합니다')
     return running
 
+def game_clear():
+    msg = game_font.render('STAGE CLEAR!', True, WHITE)
+    msg_rect = msg.get_rect(center=(screen_width / 2, screen_height / 2))
+
+    screen.fill(BLACK)
+    screen.blit(msg, msg_rect)
 
 #   이벤트 루프
 
@@ -476,7 +485,10 @@ while running:
         display_game()
     else:
         display_title()
-        
+
+    if king_count == 0:
+        print('게임클리어 진입')
+        game_clear()
 
     if stage_count == 0:
         print('게임종료 진입')
