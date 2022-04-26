@@ -81,8 +81,9 @@ pygame.mixer.music.set_volume(0.3)
 pygame.mixer.music.play(-1)
 
 #   효과음
-sound_move= pygame.mixer.Sound('sound/se_move.wav')
+sound_move = pygame.mixer.Sound('sound/se_move.wav')
 sound_crash = pygame.mixer.Sound('sound/crash.wav')
+
 
 def set_location_player(x, y):
     global player_location, player_button, player_x, player_y
@@ -111,7 +112,7 @@ enemy_y = set_location_enemy(1, 1)[1]
 
 # 플레이어 무브 기능
 def player_move(key):
-    global player_x, player_y,sound_move
+    global player_x, player_y, sound_move
     sound_move.play()
     if key == 'up':
         player_y -= 100
@@ -143,9 +144,6 @@ def attck_enemy(ps, key):
     else:
         print('잘못된 시도입니다 : attack_enemy()')
     return player_x, player_y
-
-
-
 
 
 # ### pos에 해당하는 버튼 확인
@@ -234,7 +232,14 @@ while running:
     print(f'player_button: {player_button}, enemy_button: {enemy_button}')
 
     #   체스말이 화면 밖으로 나가지 못하게 하기
-
+    if player_x < 200:
+        player_x = 207
+    elif player_x > 1200:
+        player_x = 1107
+    elif player_y < 0:
+        player_y = 7
+    elif player_y > 1000:
+        player_y = 907
     #   캐릭터와 충돌하면, 이동을 못하게 막음
     if player_button.colliderect(enemy_button):
         print('피스 충돌')
