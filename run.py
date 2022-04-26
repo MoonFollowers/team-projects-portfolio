@@ -333,7 +333,7 @@ while running:
     pygame.display.update()  # 게임 화면을 다시 그리기!
 
 # 바로 게임이 종료되지 않게 하기
-pygame.time.delay(10000)
+pygame.time.delay(3000)
 
 # 게임 종료
 pygame.quit()
