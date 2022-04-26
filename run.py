@@ -69,6 +69,8 @@ move = pygame.image.load('img/move.png')
 pygame.mixer.init()
 #   배경음
 pygame.mixer.music.load('sound/bgm.mp3')
+
+
 # pygame.mixer.music.play(-1)
 
 
@@ -93,6 +95,29 @@ def set_location_enemy(piece_x, piece_y):
     return enemy_x, enemy_y
 
 
+player_x = set_location_player(6, 5)[0]
+player_y = set_location_player(6, 5)[1]
+
+enemy_x = set_location_enemy(1, 1)[0]
+enemy_y = set_location_enemy(1, 1)[1]
+
+
+# 플레이어 무브 기능
+def player_move(key):
+    global player_x, player_y
+    if key == 'up':
+        player_y -= 100
+    elif key == 'down':
+        player_y += 100
+    elif key == 'left':
+        player_x -= 100
+    elif key == 'right':
+        player_x += 100
+    else:
+        print('잘못된 입력입니다')
+    return player_x, player_y
+
+
 ### pos에 해당하는 버튼 확인
 def check_buttons(pos):
     if player_button.collidepoint(pos):
@@ -101,8 +126,8 @@ def check_buttons(pos):
         # if move_preview == False
         if not move_preview:
             move_preview = True
-            move_up  = -100
-            move_down  = 100
+            move_up = -100
+            move_down = 100
             move_right = 100
             move_left = -100
             # print(move_up,move_down, move_left, move_right)
@@ -147,6 +172,20 @@ while running:
         if event.type == pygame.QUIT:  # 창 나가기 버튼을 누르면
             running = False  # 게임이 진행중이 아님
 
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP:
+                print('input K_UP')
+                player_move('up')
+            elif event.key == pygame.K_DOWN:
+                print('input K_DOWN')
+                player_move('down')
+            elif event.key == pygame.K_LEFT:
+                print('input K_LEFT')
+                player_move('left')
+            elif event.key == pygame.K_RIGHT:
+                print('input K_RIGHT')
+                player_move('right')
+
         if event.type == pygame.MOUSEBUTTONUP:
             click_pos = pygame.mouse.get_pos()  # get_pos()으로 클릭한 위치 값 받아오기
             print(click_pos, player_button)
@@ -157,11 +196,6 @@ while running:
 
     # 3. 게임 캐릭터 위치 정의
     #   좌표 값 넣어서 이동시키기
-    player_x = set_location_player(6, 5)[0]
-    player_y = set_location_player(6, 5)[1]
-
-    enemy_x = set_location_enemy(1, 1)[0]
-    enemy_y = set_location_enemy(1, 1)[1]
 
     # 4. 충돌 처리
 
