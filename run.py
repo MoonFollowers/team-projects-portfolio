@@ -40,7 +40,10 @@ stage_count = 30
 game_font = pygame.font.Font(None, 150)
 
 # 색상값
-WHITE = (255,255,255)
+WHITE = (255, 255, 255)
+
+# 게임 화면 분기
+start = False
 
 #   체스 보드
 board = pygame.image.load('img/ChessBoard.png')
@@ -60,6 +63,9 @@ enemy_height = enemy_size[1]
 enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
 enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
 enemy_button = pygame.Rect(enemy_x, enemy_y, enemy_width, enemy_height)
+
+# 게임스타트 버튼
+game_start_button = pygame.Rect(150, 500, 1000, 200)
 
 #   킹 피스
 king = pygame.image.load('img/King.png')
@@ -82,6 +88,7 @@ stage_5 = pygame.image.load('img/Stage_5.png')
 turn = pygame.image.load('img/TURN.png')
 item = pygame.image.load('img/ITEM.png')
 move = pygame.image.load('img/move.png')
+title_screen = pygame.image.load('img/title_screen.jpg')
 
 # 배경음 세팅
 pygame.mixer.init()
@@ -111,6 +118,7 @@ def set_location_enemy(piece_x, piece_y):
     enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
 
     return enemy_x, enemy_y
+
 
 # 피스 초기 좌표 위치 설정
 player_x = set_location_player(6, 5)[0]
@@ -159,8 +167,37 @@ def attck_enemy(key):
     return player_x, player_y
 
 
-# ### pos에 해당하는 버튼 확인
-# def check_buttons(pos):
+def display_title():
+    screen.blit(title_screen, (0, 0))
+
+
+def display_game():
+    screen.blit(board, (200, 0))
+    screen.blit(title, (0, 0))
+    screen.blit(whitegray, (0, 200))
+    screen.blit(stage_1, (0, 215))
+    screen.blit(gray, (0, 300))
+    screen.blit(move_timer, (40, 350))
+    screen.blit(whitegray, (0, 500))
+    screen.blit(turn, (60, 530))
+    screen.blit(gray, (0, 600))
+    screen.blit(whitegray, (0, 800))
+    screen.blit(item, (60, 830))
+    screen.blit(wood, (0, 900))
+    screen.blit(pause, (58, 907))
+    screen.blit(player, (player_x, player_y))
+    screen.blit(enemy, (enemy_x, enemy_y))
+
+
+### pos에 해당하는 버튼 확인
+def check_buttons(pos):
+    global start
+    if game_start_button.collidepoint(pos):
+        start = True
+
+    return start
+
+
 #     if player_button.collidepoint(pos):
 #         global move_preview
 #
@@ -205,6 +242,7 @@ def attck_enemy(key):
 
 #   이벤트 루프
 
+
 running = True  # 게임이 진행중인가?
 while running:
     dt = clock.tick(2)
@@ -230,11 +268,10 @@ while running:
 
         if event.type == pygame.MOUSEBUTTONUP:
             click_pos = pygame.mouse.get_pos()  # get_pos()으로 클릭한 위치 값 받아오기
-            print(click_pos, player_button)
+            print(click_pos)
 
-            # if click_pos:
-            #     check_buttons(click_pos)
-            #     print(move_preview)
+            if click_pos:
+                check_buttons(click_pos)
 
     # 3. 게임 캐릭터 위치 정의
 
@@ -262,21 +299,10 @@ while running:
     move_timer = game_font.render(str(stage_count).zfill(2), True, WHITE)
 
     # 5. 화면에 그리기
-    screen.blit(board, (200, 0))
-    screen.blit(title, (0, 0))
-    screen.blit(whitegray, (0, 200))
-    screen.blit(stage_1,(0,215))
-    screen.blit(gray, (0, 300))
-    screen.blit(move_timer, (40,350))
-    screen.blit(whitegray, (0, 500))
-    screen.blit(turn, (60, 530))
-    screen.blit(gray, (0, 600))
-    screen.blit(whitegray, (0, 800))
-    screen.blit(item, (60, 830))
-    screen.blit(wood, (0, 900))
-    screen.blit(pause, (58, 907))
-    screen.blit(player, (player_x, player_y))
-    screen.blit(enemy, (enemy_x, enemy_y))
+    if start:
+        display_game()
+    else:
+        display_title()
 
     pygame.display.update()  # 게임 화면을 다시 그리기!
 
