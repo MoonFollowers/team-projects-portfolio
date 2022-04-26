@@ -35,7 +35,7 @@ click_pos = 0
 key = 0
 
 # 스테이지 움직임 제한
-stage_count = 30
+stage_count = 20
 
 # 폰트 설정
 game_font = pygame.font.Font(None, 150)
@@ -258,12 +258,13 @@ def attck_enemy2(key):
 
 def attck_enemy3(key):
     # 캐릭터 피스는 이동하려는 모션
-    print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
+    print(f'플레이어가 enemy3 공격하려 합니다. 공격방향은 {key}')
     global player_x, player_y, sound_crash, stage_count, enemy3_x
     sound_crash.play()
     if key == 'up':
         player_y += 100
         enemy3_x = -500
+        print(f'enemy3의 좌표는 {enemy3_x}')
     elif key == 'down':
         player_y -= 100
         enemy3_x = -500
@@ -478,26 +479,50 @@ def game_clear():
 
 def hard_code_AI(count):
     # 에너미(0,0) 에너미2(9,0) 에너미3(2,2) 에너미4(7,2)
-    global enemy_x, enemy2_x, enemy3_x, enemy4_x, enemy_y, enemy2_y, enemy3_y, enemy4_y
+    global enemy_x, enemy2_x, enemy3_x, enemy4_x, enemy_y, enemy2_y, enemy3_y, enemy4_y, king_x, king_y
     print(count)
-    if count == 29:
+    if count == 19:
         enemy3_x = set_location_enemy(3, 2)[0]
         enemy3_y = set_location_enemy(3, 2)[1]
         return enemy3_x, enemy3_y
-    elif count == 28:
+    elif count == 18:
         enemy4_x = set_location_enemy(6, 2)[0]
         enemy4_y = set_location_enemy(6, 2)[1]
         return enemy4_x, enemy4_y
-    elif count == 27:
+    elif count == 17:
         enemy4_x = set_location_enemy(5, 2)[0]
         enemy4_y = set_location_enemy(5, 2)[1]
         return enemy4_x, enemy4_y
-    elif count == 26:
+    elif count == 16:
+        enemy3_x = set_location_enemy(4, 2)[0]
+        enemy3_y = set_location_enemy(4, 2)[1]
+        return enemy3_x, enemy3_y
+    elif count == 15:
+        enemy2_x = set_location_enemy(7, 0)[0]
+        enemy2_y = set_location_enemy(7, 0)[1]
+        return enemy3_x, enemy3_y
+    elif count == 14:
+        king_x = set_location_enemy(6, 0)[0]
+        king_y = set_location_enemy(6, 0)[1]
+        return enemy3_x, enemy3_y
+    elif count == 13:
+        enemy3_x = set_location_enemy(4, 2)[0]
+        enemy3_y = set_location_enemy(4, 2)[1]
+        return enemy3_x, enemy3_y
+    elif count == 12:
+        enemy3_x = set_location_enemy(4, 2)[0]
+        enemy3_y = set_location_enemy(4, 2)[1]
+        return enemy3_x, enemy3_y
+    elif count == 11:
+        enemy3_x = set_location_enemy(4, 2)[0]
+        enemy3_y = set_location_enemy(4, 2)[1]
+        return enemy3_x, enemy3_y
+    elif count == 10:
         enemy3_x = set_location_enemy(4, 2)[0]
         enemy3_y = set_location_enemy(4, 2)[1]
         return enemy3_x, enemy3_y
 
-   
+
 #   이벤트 루프
 
 running = True  # 게임이 진행중인가?
@@ -565,6 +590,7 @@ while running:
     elif player_button.colliderect(enemy3_button):
         print('피스 충돌')
         attck_enemy3(key)
+        print(enemy3_x)
     elif player_button.colliderect(enemy4_button):
         print('피스 충돌')
         attck_enemy4(key)
@@ -583,7 +609,7 @@ while running:
     move_timer = game_font.render(str(stage_count).zfill(2), True, WHITE)
 
     # 5. 화면에 그리기
-    if stage_count < 30:
+    if stage_count < 20:
         hard_code_AI(stage_count)
 
     if start:
