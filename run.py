@@ -125,8 +125,8 @@ def set_location_enemy(x, y):
 player_x = set_location_player(6, 5)[0]
 player_y = set_location_player(6, 5)[1]
 
-enemy1_x = set_location_enemy(1, 1)[0]
-enemy1_y = set_location_enemy(1, 1)[1]
+enemy_x = set_location_enemy(1, 1)[0]
+enemy_y = set_location_enemy(1, 1)[1]
 
 
 
@@ -137,6 +137,7 @@ def player_move(key):
     if key == 'up':
         player_y -= 100
         stage_count -= 1
+
     elif key == 'down':
         player_y += 100
         stage_count -= 1
@@ -154,16 +155,20 @@ def player_move(key):
 def attck_enemy(key):
     # 캐릭터 피스는 이동하려는 모션
     print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
-    global player_x, player_y, sound_crash, stage_count
+    global player_x, player_y, sound_crash, stage_count, enemy_x
     sound_crash.play()
     if key == 'up':
         player_y += 100
+        enemy_x = -500
     elif key == 'down':
         player_y -= 100
+        enemy_x = -500
     elif key == 'left':
         player_x += 100
+        enemy_x = -500
     elif key == 'right':
         player_x -= 100
+        enemy_x = -500
     else:
         print('잘못된 시도입니다 : attack_enemy()')
     return player_x, player_y
@@ -297,7 +302,7 @@ while running:
     # 4. 충돌 처리
     player_button = pygame.Rect(player_x, player_y, player_width, player_height)
     enemy_button = pygame.Rect(enemy_x, enemy_y, enemy_width, enemy_height)
-    print(f'player_button: {player_button}, enemy_button: {enemy_button}')
+    # print(f'player_button: {player_button}, enemy_button: {enemy_button}')
 
     #   체스말이 화면 밖으로 나가지 못하게 하기
     if player_x < 200:
@@ -316,9 +321,6 @@ while running:
     # 게임 폰트
     # str.zfill(자릿수) 로 0 채워넣어 모양 만들기
     move_timer = game_font.render(str(stage_count).zfill(2), True, WHITE)
-
-
-
 
     # 5. 화면에 그리기
     if start:
