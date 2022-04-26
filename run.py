@@ -15,7 +15,11 @@ clock = pygame.time.Clock()
 #   cell size
 margin_dashboard = 200
 cell = 100
-grid_location = [0,0]
+
+# 피스 위치 좌표
+player_location = [0,0]
+enemy_location = [0,0]
+
 #   체스 보드
 board = pygame.image.load('img/ChessBoard.png')
 #   플레이어 피스
@@ -23,11 +27,17 @@ player = pygame.image.load('img/Player.png')
 player_size = player.get_size()
 player_width = player_size[0]
 player_height = player_size[1]
-player_x = margin_dashboard + (grid_location[0] * cell) + (cell - player_width)
-player_y = (grid_location[1] * cell) + + (cell - player_height)
+player_x = margin_dashboard + (player_location[0] * cell) + (cell - player_width)/2
+player_y = (player_location[1] * cell) +  (cell - player_height)/2
 
 #   에너미 피스
 enemy = pygame.image.load('img/Enemy.png')
+enemy_size = enemy.get_size()
+enemy_width = enemy_size[0]
+enemy_height = enemy_size[1]
+enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width)/2
+enemy_y = (enemy_location[1] * cell) +  (cell - enemy_height)/2
+
 #   킹 피스
 king = pygame.image.load('img/King.png')
 #   일시정지 아이콘
@@ -66,9 +76,13 @@ while running:
             running = False  # 게임이 진행중이 아님
 
     # 3. 게임 캐릭터 위치 정의
-    grid_location = [1,5]
-    player_x = margin_dashboard + (grid_location[0] * cell) + (cell - player_width)
-    player_y = (grid_location[1] * cell) + + (cell - player_height)
+    player_location = [1,5]
+    player_x = margin_dashboard + (player_location[0] * cell) + (cell - player_width)/2
+    player_y = (player_location[1] * cell) +  (cell - player_height)/2
+
+    enemy_location = [6,3]
+    enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width)/2
+    enemy_y = (enemy_location[1] * cell) +  (cell - enemy_height)/2
 
     # 4. 충돌 처리
 
@@ -85,6 +99,7 @@ while running:
     screen.blit(wood, (0, 900))
     screen.blit(pause, (58, 907))
     screen.blit(player, (player_x, player_y))
+    screen.blit(enemy, (enemy_x, enemy_y))
 
     pygame.display.update()  # 게임 화면을 다시 그리기!
 
