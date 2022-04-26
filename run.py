@@ -112,9 +112,9 @@ def set_location_player(x, y):
     return [player_x, player_y]
 
 
-def set_location_enemy(piece_x, piece_y):
+def set_location_enemy(x, y):
     global enemy_location
-    enemy_location = [piece_x, piece_y]
+    enemy_location = [x, y]
     enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
     enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
 
@@ -125,8 +125,9 @@ def set_location_enemy(piece_x, piece_y):
 player_x = set_location_player(6, 5)[0]
 player_y = set_location_player(6, 5)[1]
 
-enemy_x = set_location_enemy(1, 1)[0]
-enemy_y = set_location_enemy(1, 1)[1]
+enemy1_x = set_location_enemy(1, 1)[0]
+enemy1_y = set_location_enemy(1, 1)[1]
+
 
 
 # 플레이어 무브 기능
