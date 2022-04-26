@@ -1,6 +1,5 @@
 import pygame
 
-
 # 1. 기본 초기화(반드시 해야됨)
 pygame.init()
 #   화면 크기 설정
@@ -26,7 +25,6 @@ player_location = [piece_x, piece_y]
 enemy_location = [piece_x, piece_y]
 king_location = [piece_x, piece_y]
 
-
 # 클릭 좌표 값
 click_pos = 0
 
@@ -44,10 +42,12 @@ game_font = pygame.font.Font(None, 150)
 
 # 색상값
 WHITE = (255, 255, 255)
-BLACK = (0,0,0)
+BLACK = (0, 0, 0)
 
 # 게임 화면 분기
 start = False
+
+king_count = 1
 
 #   체스 보드
 board = pygame.image.load('img/ChessBoard.png')
@@ -81,16 +81,14 @@ enemy4_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) 
 enemy4_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
 enemy4_button = pygame.Rect(enemy4_x, enemy4_y, enemy_width, enemy_height)
 
-
 # 킹 피스
-king = pygame.image.load('img/king.png')
+king = pygame.image.load('img/King.png')
 king_size = king.get_size()
 king_width = king_size[0]
 king_height = king_size[1]
 king_x = margin_dashboard + (king_location[0] * cell) + (cell - king_width) / 2
 king_y = (king_location[1] * cell) + (cell - king_height) / 2
 king_button = pygame.Rect(king_x, king_y, king_width, king_height)
-
 
 # 게임스타트 버튼
 game_start_button = pygame.Rect(150, 500, 1000, 200)
@@ -128,6 +126,7 @@ pygame.mixer.music.play(-1)
 sound_move = pygame.mixer.Sound('sound/se_move.wav')
 sound_crash = pygame.mixer.Sound('sound/crash.wav')
 
+
 # 함수
 def set_location_player(x, y):
     global player_location, player_button, player_x, player_y
@@ -145,21 +144,34 @@ def set_location_enemy(x, y):
     enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
     return enemy_x, enemy_y
 
+def set_location_king(x, y):
+    global enemy_location
+    enemy_location = [x, y]
+    enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
+    enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
+    return enemy_x, enemy_y
+
+
+
+
 # 피스 초기 좌표 위치 설정
-player_x = set_location_player(6, 5)[0]
-player_y = set_location_player(6, 5)[1]
+player_x = set_location_player(4, 7)[0]
+player_y = set_location_player(4, 7)[1]
 
-enemy_x = set_location_enemy(1, 1)[0]
-enemy_y = set_location_enemy(1, 1)[1]
+enemy_x = set_location_enemy(0, 0)[0]
+enemy_y = set_location_enemy(0, 0)[1]
 
-enemy2_x = set_location_enemy(2,2)[0]
-enemy2_y = set_location_enemy(2,2)[1]
+enemy2_x = set_location_enemy(9, 0)[0]
+enemy2_y = set_location_enemy(9, 0)[1]
 
-enemy3_x = set_location_enemy(3,3)[0]
-enemy3_y = set_location_enemy(3,3)[1]
+enemy3_x = set_location_enemy(2, 2)[0]
+enemy3_y = set_location_enemy(2, 2)[1]
 
-enemy4_x = set_location_enemy(4,4)[0]
-enemy4_y = set_location_enemy(4,4)[1]
+enemy4_x = set_location_enemy(7, 2)[0]
+enemy4_y = set_location_enemy(7, 2)[1]
+
+king_x = set_location_enemy(5, 0)[0]
+king_y = set_location_enemy(5, 0)[1]
 
 # 플레이어 무브 기능
 def player_move(key):
@@ -204,6 +216,70 @@ def attck_enemy(key):
         print('잘못된 시도입니다 : attack_enemy()')
     return player_x, player_y
 
+def attck_enemy2(key):
+    # 캐릭터 피스는 이동하려는 모션
+    print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
+    global player_x, player_y, sound_crash, stage_count, enemy2_x
+    sound_crash.play()
+    if key == 'up':
+        player_y += 100
+        enemy2_x = -500
+    elif key == 'down':
+        player_y -= 100
+        enemy2_x = -500
+    elif key == 'left':
+        player_x += 100
+        enemy2_x = -500
+    elif key == 'right':
+        player_x -= 100
+        enemy2_x = -500
+    else:
+        print('잘못된 시도입니다 : attack_enemy()')
+    return player_x, player_y
+
+def attck_enemy3(key):
+    # 캐릭터 피스는 이동하려는 모션
+    print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
+    global player_x, player_y, sound_crash, stage_count, enemy3_x
+    sound_crash.play()
+    if key == 'up':
+        player_y += 100
+        enemy3_x = -500
+    elif key == 'down':
+        player_y -= 100
+        enemy3_x = -500
+    elif key == 'left':
+        player_x += 100
+        enemy3_x = -500
+    elif key == 'right':
+        player_x -= 100
+        enemy3_x = -500
+    else:
+        print('잘못된 시도입니다 : attack_enemy()')
+    return player_x, player_y
+
+def attck_enemy4(key):
+    # 캐릭터 피스는 이동하려는 모션
+    print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
+    global player_x, player_y, sound_crash, stage_count, enemy4_x
+    sound_crash.play()
+    if key == 'up':
+        player_y += 100
+        enemy4_x = -500
+    elif key == 'down':
+        player_y -= 100
+        enemy4_x = -500
+    elif key == 'left':
+        player_x += 100
+        enemy4_x = -500
+    elif key == 'right':
+        player_x -= 100
+        enemy4_x = -500
+    else:
+        print('잘못된 시도입니다 : attack_enemy()')
+    return player_x, player_y
+
+
 
 def display_title():
     screen.blit(title_screen, (0, 0))
@@ -228,6 +304,7 @@ def display_game():
     screen.blit(enemy, (enemy2_x, enemy2_y))
     screen.blit(enemy, (enemy3_x, enemy3_y))
     screen.blit(enemy, (enemy4_x, enemy4_y))
+    screen.blit(king, (king_x,king_y))
 
 
 ### pos에 해당하는 버튼 확인
@@ -237,6 +314,7 @@ def check_buttons(pos):
         start = True
 
     return start
+
 
 #     if player_button.collidepoint(pos):
 #         global move_preview
@@ -281,16 +359,15 @@ def check_buttons(pos):
 
 def game_over():
     msg = game_font.render('GAME OVER', True, WHITE)
-    msg_rect = msg.get_rect(center=(screen_width/2,screen_height/2))
+    msg_rect = msg.get_rect(center=(screen_width / 2, screen_height / 2))
 
     screen.fill(BLACK)
     screen.blit(msg, msg_rect)
 
     global running
-    running=False
+    running = False
     print('게임을 진짜 종료합니다')
     return running
-
 
 
 #   이벤트 루프
@@ -345,6 +422,15 @@ while running:
     if player_button.colliderect(enemy_button):
         print('피스 충돌')
         attck_enemy(key)
+    elif player_button.colliderect(enemy2_button):
+        print('피스 충돌')
+        attck_enemy2(key)
+    elif player_button.colliderect(enemy2_button):
+        print('피스 충돌')
+        attck_enemy3(key)
+    elif player_button.colliderect(enemy2_button):
+        print('피스 충돌')
+        attck_enemy4(key)
 
     # 게임 폰트
     # str.zfill(자릿수) 로 0 채워넣어 모양 만들기
@@ -355,7 +441,6 @@ while running:
         display_game()
     else:
         display_title()
-
 
     if stage_count == 0:
         print('게임종료 진입')
