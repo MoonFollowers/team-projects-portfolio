@@ -27,6 +27,7 @@ move_up = 0
 move_down = 0
 move_left = 0
 move_right = 0
+click_pos = 0
 
 #   체스 보드
 board = pygame.image.load('img/ChessBoard.png')
@@ -71,7 +72,7 @@ move = pygame.image.load('img/move.png')
 pygame.mixer.init()
 #   배경음
 pygame.mixer.music.load('sound/bgm.mp3')
-pygame.mixer.music.play(-1)
+# pygame.mixer.music.play(-1)
 
 
 #   효과음
@@ -96,18 +97,19 @@ def set_location_enemy(piece_x, piece_y):
 ### pos에 해당하는 버튼 확인
 def check_buttons(pos):
     if player_button.collidepoint(pos):
-        def show_move_pointer():
-            global move_up, move_down, move_left, move_right
+        global move_up, move_down, move_left, move_right
 
-            move_up += 100
-            move_down -= 100
-            move_right += 100
-            move_left -= 100
+        move_up += 100
+        move_down -= 100
+        move_right += 100
+        move_left -= 100
 
-            screen.blit(move, (player_x, player_y + move_up))
-            screen.blit(move, (player_x, player_y + move_down))
-            screen.blit(move, (player_x + move_right, player_y))
-            screen.blit(move, (player_x + move_left, player_y + move_up))
+        print(move_up,move_down, move_left, move_right)
+
+        screen.blit(move, (player_x, player_y + move_up))
+        screen.blit(move, (player_x, player_y + move_down))
+        screen.blit(move, (player_x + move_right, player_y))
+        screen.blit(move, (player_x + move_left, player_y + move_up))
 
 
 #   이벤트 루프
@@ -124,13 +126,13 @@ while running:
             click_pos = pygame.mouse.get_pos()  # get_pos()으로 클릭한 위치 값 받아오기
             print(click_pos)
 
-    if click_pos:
-        check_buttons(click_pos)
+        if click_pos:
+            check_buttons(click_pos)
 
     # 3. 게임 캐릭터 위치 정의
     #   좌표 값 넣어서 이동시키기
-    player_x = set_location_player(9, 9)[0]
-    player_y = set_location_player(9, 9)[1]
+    player_x = set_location_player(5, 5)[0]
+    player_y = set_location_player(5, 5)[1]
 
     enemy_x = set_location_enemy(1, 1)[0]
     enemy_y = set_location_enemy(1, 1)[1]
