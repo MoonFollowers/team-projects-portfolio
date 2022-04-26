@@ -38,7 +38,7 @@ key = 0
 stage_count = 30
 
 # 폰트 설정
-game_font = pygame.font.Font(None,150)
+game_font = pygame.font.Font(None, 150)
 game_font2 = pygame.font.Font(None, 80)
 
 # 색상값
@@ -173,6 +173,8 @@ enemy4_y = set_location_enemy(7, 2)[1]
 king_x = set_location_enemy(5, 0)[0]
 king_y = set_location_enemy(5, 0)[1]
 
+
+# 에너미(0,0) 에너미2(9,0) 에너미3(2,2) 에너미4(7,2)
 
 # 플레이어 무브 기능
 def player_move(key):
@@ -390,17 +392,17 @@ def game_over():
     msg = game_font.render('GAME OVER', True, WHITE)
     msg_rect = msg.get_rect(center=(screen_width / 2, screen_height / 2))
     msg2 = game_font2.render('--THANK YOU FOR PLAY--', True, WHITE)
-    msg2_rect = msg.get_rect(center=(screen_width / 2 -30, screen_height / 2 + 100))
+    msg2_rect = msg.get_rect(center=(screen_width / 2 - 30, screen_height / 2 + 100))
 
     screen.fill(BLACK)
     screen.blit(msg, msg_rect)
     screen.blit(msg2, msg2_rect)
 
-
     global running
     running = False
     print('게임을 진짜 종료합니다')
     return running
+
 
 def game_clear():
     global running
@@ -408,7 +410,7 @@ def game_clear():
     msg2 = game_font2.render('--THANK YOU FOR PLAY--', True, WHITE)
     msg_rect = msg.get_rect(center=(screen_width / 2, screen_height / 2))
 
-    msg2_rect = msg.get_rect(center=(screen_width / 2 +40, screen_height / 2 + 100))
+    msg2_rect = msg.get_rect(center=(screen_width / 2 + 40, screen_height / 2 + 100))
 
     screen.fill(BLACK)
     screen.blit(msg, msg_rect)
@@ -416,6 +418,40 @@ def game_clear():
 
     running = False
 
+
+def hard_code_AI(count):
+    # 에너미(0,0) 에너미2(9,0) 에너미3(2,2) 에너미4(7,2)
+    global enemy_x, enemy2_x, enemy3_x, enemy4_x, enemy_y, enemy2_y, enemy3_y, enemy4_y
+    print(count)
+    if count == 29:
+        enemy3_x = set_location_enemy(3, 2)[0]
+        enemy3_y = set_location_enemy(3, 2)[1]
+        return enemy3_x, enemy3_y
+    elif count == 28:
+        enemy4_x = set_location_enemy(6, 2)[0]
+        enemy4_y = set_location_enemy(6, 2)[1]
+        return enemy4_x, enemy4_y
+    elif count == 27:
+        enemy4_x = set_location_enemy(5, 2)[0]
+        enemy4_y = set_location_enemy(5, 2)[1]
+        return enemy4_x, enemy4_y
+    elif count == 26:
+        enemy3_x = set_location_enemy(4, 2)[0]
+        enemy3_y = set_location_enemy(4, 2)[1]
+        return enemy3_x, enemy3_y
+
+    # elif count == 25:
+    # pass
+    # elif count == 24:
+    # pass
+    # elif count == 23:
+    # pass
+    # elif count == 22:
+    # pass
+    # elif count == 21:
+    # pass
+    # elif count == 20:
+    # pass
 
 #   이벤트 루프
 
@@ -494,6 +530,9 @@ while running:
     move_timer = game_font.render(str(stage_count).zfill(2), True, WHITE)
 
     # 5. 화면에 그리기
+    if stage_count < 30:
+        hard_code_AI(stage_count)
+
     if start:
         display_game()
     else:
