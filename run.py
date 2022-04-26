@@ -33,6 +33,16 @@ click_pos = 0
 # 방향키 값
 key = 0
 
+# 스테이지 움직임 제한
+stage_count = 30
+
+# 폰트 설정
+game_font = pygame.font.Font(None, 150)
+
+# 색상값
+WHITE = (255,255,255)
+
+
 #   체스 보드
 board = pygame.image.load('img/ChessBoard.png')
 #   플레이어 피스
@@ -112,29 +122,32 @@ enemy_y = set_location_enemy(1, 1)[1]
 
 # 플레이어 무브 기능
 def player_move(key):
-    global player_x, player_y, sound_move
+    global player_x, player_y, sound_move, stage_count
     sound_move.play()
     if key == 'up':
         player_y -= 100
+        stage_count -= 1
     elif key == 'down':
         player_y += 100
+        stage_count -= 1
     elif key == 'left':
         player_x -= 100
+        stage_count -= 1
     elif key == 'right':
         player_x += 100
+        stage_count -= 1
     else:
         print('잘못된 입력입니다')
     return player_x, player_y, key
 
 
-def attck_enemy(ps, key):
+def attck_enemy(key):
     # 캐릭터 피스는 이동하려는 모션
     print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
-    global player_x, player_y, sound_crash
+    global player_x, player_y, sound_crash, stage_count
     sound_crash.play()
     if key == 'up':
         player_y += 100
-
     elif key == 'down':
         player_y -= 100
     elif key == 'left':
@@ -243,13 +256,18 @@ while running:
     #   캐릭터와 충돌하면, 이동을 못하게 막음
     if player_button.colliderect(enemy_button):
         print('피스 충돌')
-        attck_enemy(player_button, key)
+        attck_enemy(key)
+
+    # 게임 폰트
+    move_timer = game_font.render(str(stage_count), True, WHITE)
 
     # 5. 화면에 그리기
     screen.blit(board, (200, 0))
     screen.blit(title, (0, 0))
     screen.blit(whitegray, (0, 200))
+    screen.blit(stage_1,(0,215))
     screen.blit(gray, (0, 300))
+    screen.blit(move_timer, (40,350))
     screen.blit(whitegray, (0, 500))
     screen.blit(turn, (60, 530))
     screen.blit(gray, (0, 600))
