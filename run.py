@@ -41,6 +41,7 @@ game_font = pygame.font.Font(None, 150)
 
 # 색상값
 WHITE = (255, 255, 255)
+BLACK = (0,0,0)
 
 # 게임 화면 분기
 start = False
@@ -239,9 +240,26 @@ def check_buttons(pos):
 #             pygame.display.update()
 #             return move_preview
 
+def game_over():
+    msg = game_font.render('GAME OVER', True, WHITE)
+    msg_rect = msg.get_rect(center=(screen_width/2,screen_height/2))
+
+    screen.fill(BLACK)
+    screen.blit(msg, msg_rect)
+
+    global running
+    running=False
+    print('게임을 진짜 종료합니다')
+    return running
+
+
+
+
+
+
+
 
 #   이벤트 루프
-
 
 running = True  # 게임이 진행중인가?
 while running:
@@ -298,13 +316,24 @@ while running:
     # str.zfill(자릿수) 로 0 채워넣어 모양 만들기
     move_timer = game_font.render(str(stage_count).zfill(2), True, WHITE)
 
+
+
+
     # 5. 화면에 그리기
     if start:
         display_game()
     else:
         display_title()
 
+
+    if stage_count == 0:
+        print('게임종료 진입')
+        game_over()
+
     pygame.display.update()  # 게임 화면을 다시 그리기!
+
+# 바로 게임이 종료되지 않게 하기
+pygame.time.delay(10000)
 
 # 게임 종료
 pygame.quit()
