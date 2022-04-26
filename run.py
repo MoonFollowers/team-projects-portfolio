@@ -38,7 +38,8 @@ key = 0
 stage_count = 30
 
 # 폰트 설정
-game_font = pygame.font.Font(None, 150)
+game_font = pygame.font.Font(None,150)
+game_font2 = pygame.font.Font(None, 80)
 
 # 색상값
 WHITE = (255, 255, 255)
@@ -388,9 +389,13 @@ def check_buttons(pos):
 def game_over():
     msg = game_font.render('GAME OVER', True, WHITE)
     msg_rect = msg.get_rect(center=(screen_width / 2, screen_height / 2))
+    msg2 = game_font2.render('--THANK YOU FOR PLAY--', True, WHITE)
+    msg2_rect = msg.get_rect(center=(screen_width / 2 -30, screen_height / 2 + 100))
 
     screen.fill(BLACK)
     screen.blit(msg, msg_rect)
+    screen.blit(msg2, msg2_rect)
+
 
     global running
     running = False
@@ -398,11 +403,19 @@ def game_over():
     return running
 
 def game_clear():
+    global running
     msg = game_font.render('STAGE CLEAR!', True, WHITE)
+    msg2 = game_font2.render('--THANK YOU FOR PLAY--', True, WHITE)
     msg_rect = msg.get_rect(center=(screen_width / 2, screen_height / 2))
+
+    msg2_rect = msg.get_rect(center=(screen_width / 2 +40, screen_height / 2 + 100))
 
     screen.fill(BLACK)
     screen.blit(msg, msg_rect)
+    screen.blit(msg2, msg2_rect)
+
+    running = False
+
 
 #   이벤트 루프
 
