@@ -1,5 +1,24 @@
 import pygame
 
+
+def set_location_player(piece_x, piece_y):
+    global player_location
+    player_location = [piece_x, piece_y]
+    player_x = margin_dashboard + (player_location[0] * cell) + (cell - player_width) / 2
+    player_y = (player_location[1] * cell) + (cell - player_height) / 2
+    return player_x, player_y
+
+
+def set_location_enemy(piece_x, piece_y):
+    global enemy_location
+    enemy_location = [piece_x, piece_y]
+    enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
+    enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
+    print(enemy_location, enemy_x, enemy_y)
+
+    return enemy_x, enemy_y
+
+
 # 1. 기본 초기화(반드시 해야됨)
 pygame.init()
 #   화면 크기 설정
@@ -17,8 +36,12 @@ margin_dashboard = 200
 cell = 100
 
 # 피스 위치 좌표
-player_location = [0,0]
-enemy_location = [0,0]
+default_player = 0
+default_enemy = 9
+piece_x = 0
+piece_y = 0
+player_location = [piece_x, piece_y]
+enemy_location = [piece_x, piece_y]
 
 #   체스 보드
 board = pygame.image.load('img/ChessBoard.png')
@@ -27,16 +50,19 @@ player = pygame.image.load('img/Player.png')
 player_size = player.get_size()
 player_width = player_size[0]
 player_height = player_size[1]
-player_x = margin_dashboard + (player_location[0] * cell) + (cell - player_width)/2
-player_y = (player_location[1] * cell) +  (cell - player_height)/2
+player_x = margin_dashboard + (player_location[0] * cell) + (cell - player_width) / 2
+player_y = (player_location[1] * cell) + (cell - player_height) / 2
 
 #   에너미 피스
 enemy = pygame.image.load('img/Enemy.png')
 enemy_size = enemy.get_size()
 enemy_width = enemy_size[0]
 enemy_height = enemy_size[1]
-enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width)/2
-enemy_y = (enemy_location[1] * cell) +  (cell - enemy_height)/2
+enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
+enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
+
+set_location_player(0, 0)
+set_location_enemy(9, 9)
 
 #   킹 피스
 king = pygame.image.load('img/King.png')
@@ -76,13 +102,6 @@ while running:
             running = False  # 게임이 진행중이 아님
 
     # 3. 게임 캐릭터 위치 정의
-    player_location = [1,5]
-    player_x = margin_dashboard + (player_location[0] * cell) + (cell - player_width)/2
-    player_y = (player_location[1] * cell) +  (cell - player_height)/2
-
-    enemy_location = [6,3]
-    enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width)/2
-    enemy_y = (enemy_location[1] * cell) +  (cell - enemy_height)/2
 
     # 4. 충돌 처리
 
