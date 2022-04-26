@@ -279,6 +279,31 @@ def attck_enemy4(key):
         print('잘못된 시도입니다 : attack_enemy()')
     return player_x, player_y
 
+def attck_king(key):
+    # 캐릭터 피스는 이동하려는 모션
+    print(f'플레이어 피스가 공격하려 합니다. 공격방향은 {key}')
+    global player_x, player_y, sound_crash, stage_count, king_x
+    sound_crash.play()
+    if key == 'up':
+        player_y += 100
+        king_x = -500
+        king_count=0
+    elif key == 'down':
+        player_y -= 100
+        king_x = -500
+        king_count = 0
+    elif key == 'left':
+        player_x += 100
+        king_x = -500
+        king_count = 0
+    elif key == 'right':
+        player_x -= 100
+        king_x = -500
+        king_count = 0
+    else:
+        print('잘못된 시도입니다 : attack_enemy()')
+    return player_x, player_y
+
 
 
 def display_title():
@@ -407,6 +432,11 @@ while running:
     # 4. 충돌 처리
     player_button = pygame.Rect(player_x, player_y, player_width, player_height)
     enemy_button = pygame.Rect(enemy_x, enemy_y, enemy_width, enemy_height)
+    enemy2_button = pygame.Rect(enemy2_x, enemy2_y, enemy_width, enemy_height)
+    enemy3_button = pygame.Rect(enemy3_x, enemy3_y, enemy_width, enemy_height)
+    enemy4_button = pygame.Rect(enemy4_x, enemy4_y, enemy_width, enemy_height)
+    king_button = pygame.Rect(king_x, king_y, king_width, king_height)
+
     # print(f'player_button: {player_button}, enemy_button: {enemy_button}')
 
     #   체스말이 화면 밖으로 나가지 못하게 하기
@@ -419,18 +449,23 @@ while running:
     elif player_y > 1000:
         player_y = 907
     #   캐릭터와 충돌하면, 이동을 못하게 막음
+    # print(f'플레이어피스: {player_button} 에너미3피스: {enemy3_button}')
+
     if player_button.colliderect(enemy_button):
         print('피스 충돌')
         attck_enemy(key)
     elif player_button.colliderect(enemy2_button):
         print('피스 충돌')
         attck_enemy2(key)
-    elif player_button.colliderect(enemy2_button):
+    elif player_button.colliderect(enemy3_button):
         print('피스 충돌')
         attck_enemy3(key)
-    elif player_button.colliderect(enemy2_button):
+    elif player_button.colliderect(enemy4_button):
         print('피스 충돌')
         attck_enemy4(key)
+    elif player_button.colliderect(king_button):
+        print('피스 충돌')
+        attck_king(key)
 
     # 게임 폰트
     # str.zfill(자릿수) 로 0 채워넣어 모양 만들기
@@ -441,6 +476,7 @@ while running:
         display_game()
     else:
         display_title()
+        
 
     if stage_count == 0:
         print('게임종료 진입')
