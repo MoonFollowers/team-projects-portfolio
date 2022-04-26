@@ -1,24 +1,5 @@
 import pygame
 
-
-def set_location_player(piece_x, piece_y):
-    global player_location
-    player_location = [piece_x, piece_y]
-    player_x = margin_dashboard + (player_location[0] * cell) + (cell - player_width) / 2
-    player_y = (player_location[1] * cell) + (cell - player_height) / 2
-    return player_x, player_y
-
-
-def set_location_enemy(piece_x, piece_y):
-    global enemy_location
-    enemy_location = [piece_x, piece_y]
-    enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
-    enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
-    print(enemy_location, enemy_x, enemy_y)
-
-    return enemy_x, enemy_y
-
-
 # 1. 기본 초기화(반드시 해야됨)
 pygame.init()
 #   화면 크기 설정
@@ -42,6 +23,10 @@ piece_x = 0
 piece_y = 0
 player_location = [piece_x, piece_y]
 enemy_location = [piece_x, piece_y]
+move_up = 0
+move_down = 0
+move_left = 0
+move_right = 0
 
 #   체스 보드
 board = pygame.image.load('img/ChessBoard.png')
@@ -52,7 +37,7 @@ player_width = player_size[0]
 player_height = player_size[1]
 player_x = margin_dashboard + (player_location[0] * cell) + (cell - player_width) / 2
 player_y = (player_location[1] * cell) + (cell - player_height) / 2
-
+player_button = pygame.Rect(player_x, player_y, player_width, player_height)
 #   에너미 피스
 enemy = pygame.image.load('img/Enemy.png')
 enemy_size = enemy.get_size()
@@ -60,9 +45,6 @@ enemy_width = enemy_size[0]
 enemy_height = enemy_size[1]
 enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
 enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
-
-set_location_player(0, 0)
-set_location_enemy(9, 9)
 
 #   킹 피스
 king = pygame.image.load('img/King.png')
@@ -89,19 +71,68 @@ pygame.mixer.init()
 #   배경음
 pygame.mixer.music.load('sound/bgm.mp3')
 pygame.mixer.music.play(-1)
+
+
 #   효과음
+
+
+def set_location_player(piece_x, piece_y):
+    global player_location
+    player_location = [piece_x, piece_y]
+    player_x = margin_dashboard + (player_location[0] * cell) + (cell - player_width) / 2
+    player_y = (player_location[1] * cell) + (cell - player_height) / 2
+    return [player_x, player_y]
+
+
+def set_location_enemy(piece_x, piece_y):
+    global enemy_location
+    enemy_location = [piece_x, piece_y]
+    enemy_x = margin_dashboard + (enemy_location[0] * cell) + (cell - enemy_width) / 2
+    enemy_y = (enemy_location[1] * cell) + (cell - enemy_height) / 2
+    return enemy_x, enemy_y
+
+
+### pos에 해당하는 버튼 확인
+def check_buttons(pos):
+
+
+    if player_button.collidepoint(pos):
+
+        def show_move_pointer():
+            global move_up, move_down, move_left, move_right
+
+            move_up += 100
+            move_down -= 100
+            move_right += 100
+            move_left -= 100
+
+            up_rect = pygame.Rect()
+
 
 #   이벤트 루프
 running = True  # 게임이 진행중인가?
 while running:
-    dt = clock.tick(30)
+    dt = clock.tick(1)
 
     #   이벤트 처리
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # 창 나가기 버튼을 누르면
             running = False  # 게임이 진행중이 아님
 
+        if event.type == pygame.MOUSEBUTTONUP:
+            click_pos = pygame.mouse.get_pos()  # get_pos()으로 클릭한 위치 값 받아오기
+            print(click_pos)
+
+    # if click_pos:
+    #     check_buttons(click_pos)
+
     # 3. 게임 캐릭터 위치 정의
+    #   좌표 값 넣어서 이동시키기
+    player_x = set_location_player(9, 9)[0]
+    player_y = set_location_player(9, 9)[1]
+
+    enemy_x = set_location_enemy(1, 1)[0]
+    enemy_y = set_location_enemy(1, 1)[1]
 
     # 4. 충돌 처리
 
