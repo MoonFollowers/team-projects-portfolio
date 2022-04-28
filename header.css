@@ -59,3 +59,24 @@ header {
     width: 333.5px;
     height: 39px;
 }
+
+/* 헤더 홈버튼 플렉스 div */
+.homebtn_flex {
+    width: 333.5px;
+    height: 39px;
+    display: flex;
+}
+
+/* 헤더 홈버튼 이미지 div */
+.homebtn_img_wrap {
+    width: 103px;
+    height: 29px;
+    margin-top: 7px;
+}
+
+/* 헤더 홈버튼 이미지 image */
+.homebtn_image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
