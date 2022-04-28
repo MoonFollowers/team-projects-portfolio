@@ -1,4 +1,9 @@
-/* 헤더 전체에 적용할 색상 값 지정*/
+/* 바디 전체 색상 지정 */
+body {
+    background-color: #fafafa;
+}
+
+/* 헤더 전체에 적용할 색상 값 지정 */
 header {
     background-color: white;
     width: 100%;
