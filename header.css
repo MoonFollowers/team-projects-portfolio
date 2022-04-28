@@ -32,7 +32,7 @@ header {
 }
 
 /* 홈버튼 영역 div */
-.homebtn_div {
+.homebtn_wrap {
     background-color: palevioletred;
     width: 333.5px;
     height: 39px;
@@ -40,7 +40,7 @@ header {
 }
 
 /* 검색 영역 div */
-.searchbar_div {
+.searchbar_wrap {
     background-color: greenyellow;
     width: 268px;
     height: 36px;
