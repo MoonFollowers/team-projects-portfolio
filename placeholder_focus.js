@@ -1,3 +1,5 @@
+
+
 // 아이콘과 스팬 숨겨버리는 기능
 // 헤더 검색 플레이스 홀더 값이 '검색'이라면, 아이콘과 스팬을 숨기기
 function hide_fakeinput() {
@@ -18,8 +20,9 @@ function hide_fakeinput() {
 // 포커스 아웃이 되거나 아이콘 버튼을 클릭하면,
 // 다시 가짜 검색 아이콘과 스팬 태그가 나오기
 
+function show_fakeinput(){
 
-// 헤더 검색 인풋 태그의 엘리멘트 가져오기
+    // 헤더 검색 인풋 태그의 엘리멘트 가져오기
 const is_focus = document.getElementsByClassName('searchbar_input')
 // 헤더 검색 인풋 태그의 플레이스 홀더 값 가져오기
 const fake_ph = document.querySelector('.searchbar_input').placeholder
@@ -37,5 +40,8 @@ is_focus.addEventListener('focusout', (event) => {
         fake_span.style.display = 'block'
     }
 })
+
+}
+
 
 
