@@ -41,7 +41,7 @@ header {
 
 /* 헤더 검색 영역 div */
 .searchbar_wrap {
-    background-color: #dbdbdb;
+    background-color: #efefef;
     width: 268px;
     height: 36px;
     border-radius: 8px;
@@ -86,4 +86,17 @@ header {
     width: 268px;
     height: 36px;
     padding: 3px 16px;
+}
+.searchbar_wrap > div, .searchbar_wrap > div >input {
+    width: 268px;
+    height: 36px;
+}
+
+/* 헤더 검색 인풋 태그 */
+.searchbar_input {
+    font-size: 18px;
+    background: rgba(255,255,255,-1);
+    border: 0;
+    outline: 0;
+    line-height: 18px;
 }
