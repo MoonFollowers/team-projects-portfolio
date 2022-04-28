@@ -80,3 +80,8 @@ header {
     max-height: 100%;
     object-fit: contain;
 }
+
+/* 헤더 검색 패딩 div */
+.searchbar_padding {
+    padding: 3px 16px;
+}
