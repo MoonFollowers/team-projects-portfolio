@@ -82,6 +82,8 @@ header {
 }
 
 /* 헤더 검색 패딩 div */
-.searchbar_padding {
+.searchbar_wrap {
+    width: 268px;
+    height: 36px;
     padding: 3px 16px;
 }
