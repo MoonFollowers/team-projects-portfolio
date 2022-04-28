@@ -18,3 +18,10 @@ header {
     padding: 0 20px;
     display: flex;
 }
+
+.homebtn_div {
+    background-color: palevioletred;
+    width: 333.5px;
+    height: 39px;
+    display: flex;
+}
