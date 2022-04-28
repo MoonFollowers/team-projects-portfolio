@@ -16,7 +16,12 @@ header {
     max-width: 975px;
     height: 60px;
     padding: 0 20px;
-    display: flex;
+    margin: auto;
+
+    /* 아이템을 수평, 수직 가운데 정렬하는 코드 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .homebtn_div {
