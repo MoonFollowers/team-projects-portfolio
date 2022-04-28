@@ -48,5 +48,7 @@ header {
 
 /* 헤더 아이콘 영역 div */
 .icons_wrap {
-
+    background-color: cornflowerblue;
+    width: 333.5px;
+    height: 24px;
 }
