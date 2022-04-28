@@ -100,3 +100,14 @@ header {
     outline: 0;
     line-height: 18px;
 }
+
+/* 헤더 검색 아이콘 */
+.searchbar_icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 32px;
+    color: grey;
+    margin-right: 12px;
+}
+
