@@ -99,6 +99,8 @@ header {
     border: 0;
     outline: 0;
     line-height: 18px;
+    z-index: 3;
+    position: absolute;
 }
 /* 헤더 검색 가짜 인풋1 div */
 .searchbar_fake_input1 {
@@ -108,6 +110,7 @@ header {
     position: absolute;
     top: 24px;
     left: 520px;
+    z-index: 2;
 }
 
 /* 헤더 검색 가짜 인풋2 div */
