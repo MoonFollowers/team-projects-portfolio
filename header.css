@@ -94,20 +94,44 @@ header {
 
 /* 헤더 검색 인풋 태그 */
 .searchbar_input {
-    font-size: 18px;
+    font-size: 19px;
     background: rgba(255,255,255,-1);
     border: 0;
     outline: 0;
     line-height: 18px;
 }
+/* 헤더 검색 가짜 인풋1 div */
+.searchbar_fake_input1 {
+    width: 268px;
+    height: 36px;
+    padding: 0 16px;
+    position: absolute;
+    top: 24px;
+    left: 520px;
+}
 
-/* 헤더 검색 아이콘 */
+/* 헤더 검색 가짜 인풋2 div */
+.searchbar_fake_input2 {
+    width: 236px;
+    height: 25px;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 검색 아이콘 i */
 .searchbar_icon {
     width: 16px;
     height: 16px;
-    position: absolute;
     top: 32px;
     color: grey;
     margin-right: 12px;
+}
+
+/* 헤더 검색 span */
+.searchbar_span {
+    font-size: 19px;
+    color: grey;
+    top: 28px;
 }
 
