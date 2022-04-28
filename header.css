@@ -44,6 +44,7 @@ header {
     background-color: greenyellow;
     width: 268px;
     height: 36px;
+    border-radius: 8px;
 }
 
 /* 헤더 아이콘 영역 div */
