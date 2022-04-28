@@ -102,6 +102,7 @@ header {
     z-index: 3;
     position: absolute;
 }
+
 /* 헤더 검색 가짜 인풋1 div */
 .searchbar_fake_input1 {
     width: 268px;
