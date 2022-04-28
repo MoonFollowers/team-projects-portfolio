@@ -11,3 +11,10 @@ header {
     border: 1px solid #dbdbdb;
 }
 
+.nav_bar {
+    background-color: gold;
+    max-width: 975px;
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+}
