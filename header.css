@@ -38,3 +38,10 @@ header {
     height: 39px;
     display: flex;
 }
+
+/* 검색 영역 div */
+.searchbar_div {
+    background-color: greenyellow;
+    width: 268px;
+    height: 36px;
+}
