@@ -41,7 +41,7 @@ header {
 
 /* 헤더 검색 영역 div */
 .searchbar_wrap {
-    background-color: grey;
+    background-color: #dbdbdb;
     width: 268px;
     height: 36px;
     border-radius: 8px;
