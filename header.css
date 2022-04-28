@@ -11,6 +11,7 @@ header {
     border: 1px solid #dbdbdb;
 }
 
+/* 내비게이션 바 전체 */
 .nav_bar {
     background-color: gold;
     max-width: 975px;
@@ -19,16 +20,18 @@ header {
     margin: auto;
 }
 
+/* 내비게이션 하위 태그를 감싸는 div의 속성 */
 .nav_wrap {
     width: 975px;
     height: 60px;
-/* 아이템을 수평, 수직 가운데 정렬하는 코드 */
+/* 하위 아이템을 수평, 수직 가운데 정렬하는 코드 */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
+/* 홈버튼 영역 div */
 .homebtn_div {
     background-color: palevioletred;
     width: 333.5px;
