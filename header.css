@@ -31,7 +31,7 @@ header {
     align-items: center;
 }
 
-/* 홈버튼 영역 div */
+/* 헤더 홈버튼 영역 div */
 .homebtn_wrap {
     background-color: palevioletred;
     width: 333.5px;
@@ -39,9 +39,14 @@ header {
     display: flex;
 }
 
-/* 검색 영역 div */
+/* 헤더 검색 영역 div */
 .searchbar_wrap {
     background-color: greenyellow;
     width: 268px;
     height: 36px;
+}
+
+/* 헤더 아이콘 영역 div */
+.icons_wrap {
+
 }
