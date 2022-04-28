@@ -53,3 +53,9 @@ header {
     width: 333.5px;
     height: 24px;
 }
+
+/* 헤더 홈버튼 a */
+.homebtn_a {
+    width: 333.5px;
+    height: 39px;
+}
