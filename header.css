@@ -4,6 +4,14 @@ body {
     margin: 0;
 }
 
+
+/**/
+/**/
+/* 1. 헤더 파트 */
+/**/
+/**/
+
+
 /* 헤더 전체에 적용할 색상 값 지정 */
 header {
     background-color: white;
@@ -171,3 +179,13 @@ header {
     height: 100%;
     background-size: cover;
 }
+
+
+
+/**/
+/**/
+/* 2. 바디 > 메인 파트 */
+/**/
+/**/
+
+
