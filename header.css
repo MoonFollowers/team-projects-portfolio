@@ -52,7 +52,7 @@ header {
 
 /* 헤더 아이콘 영역 div */
 .icons_wrap {
-    background-color: cornflowerblue;
+    /*background-color: cornflowerblue;*/
     width: 333.5px;
     height: 24px;
 }
@@ -146,9 +146,16 @@ header {
     position: relative;
 }
 
+/* 헤더 아이콘 상위 태그 div */
+.icons_div {
+    width: 24px;
+    height: 24px;
+    margin-left: 24px;
+}
+
 /* 헤더 아이콘 사이즈 일괄 */
 .icons_icons {
     width: 24px;
     height: 24px;
-    margin-left: 24px;
+
 }
