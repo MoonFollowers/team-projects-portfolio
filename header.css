@@ -188,9 +188,87 @@ header {
 /**/
 /**/
 
+/* 메인태그 */
 main {
     max-width: 935px;
     background-color: darkred;
     height: 3000px;
     margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 메인태그 > 스토리카드 부분 */
+.field_story {
+    background-color: #ff7a7a;
+    width: 614px;
+    height: 2000px;
+    margin-right: 28px;
+}
+
+/* 메인태그 > 푸터 부분 */
+.field_footer {
+    background-color: #69dbff;
+    width: 293px;
+    height: 1000px;
+}
+
+/* 스토리 필드 > 프레젠테이션 부분 */
+.wrap_presentation {
+    background-color: #d049ff;
+    width: 614px;
+    height: 119px;
+}
+
+/* 스토리 필드 > 스토리카드 부분 */
+.wrap_storycards {
+    background-color: #6bff83;
+    width: 614px;
+    height: 1053px;
+    margin-top: 24px;
+
+}
+
+/* 스토리카드 > 탑 부분 */
+.storycards_top {
+    background-color: #c4c4c4;
+    width: 614px;
+    height: 71px;
+}
+
+/* 스토리카드 > 미들 부분 */
+.storycards_middle {
+    background-color: #62ffc6;
+    width: 614px;
+    height: 803.5px;
+}
+
+/* 스토리카드 > 바텀 부분 */
+.storycards_bottom {
+    background-color: #15993a;
+    width: 614px;
+    height: 177px;
+}
+
+/* 푸터필드 > 프로필 부분 */
+.footer_profile {
+    background-color: #ffad62;
+    width: 293px;
+    height: 56px;
+    margin: 18px 0 10px 0;
+}
+
+/* 푸터필드 > 추천 부분 */
+.footer_recommend {
+    background-color: #ff8484;
+    width: 293px;
+    height: 291px;
+    margin-bottom: 12px;
+}
+
+/* 푸터필드 > 정보 부분 */
+.footer_info {
+    background-color: #c4c4c4;
+    width: 293px;
+    height: 129px;
 }
