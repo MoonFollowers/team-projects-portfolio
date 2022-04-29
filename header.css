@@ -47,6 +47,7 @@ header {
     width: 268px;
     height: 36px;
     border-radius: 8px;
+    padding: 3px 16px;
 }
 
 /* 헤더 아이콘 영역 div */
@@ -83,12 +84,7 @@ header {
     object-fit: contain;
 }
 
-/* 헤더 검색 패딩 div */
-.searchbar_wrap {
-    width: 268px;
-    height: 36px;
-    padding: 3px 16px;
-}
+
 .searchbar_wrap > div, .searchbar_wrap > div >input {
     width: 268px;
     height: 36px;
@@ -96,7 +92,7 @@ header {
 
 /* 헤더 검색 인풋 태그 */
 .searchbar_input {
-    font-size: 19px;
+    font-size: 16px;
     background: rgba(255,255,255,-1);
     border: 0;
     outline: 0;
@@ -111,8 +107,8 @@ header {
     height: 36px;
     padding: 0 16px;
     position: absolute;
-    top: 24px;
-    left: 43%;
+    top: 18px;
+    left: 42%;
     z-index: 2;
 }
 
@@ -136,7 +132,7 @@ header {
 
 /* 헤더 검색 span */
 .searchbar_span {
-    font-size: 19px;
+    font-size: 16px;
     color: grey;
     top: 28px;
 }
