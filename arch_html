@@ -86,47 +86,47 @@
 *
 *           4. 스토리카드 상단 div   storycards_top
 *
-*               5. 스토리카드 상단 flex div    storycards_flex
+*               5. 스토리카드 상단 flex div    storycards_top_flex
 *
-*                   6. 스토리카드 상단 프로필 div    storycards_profile
+*                   6. 스토리카드 상단 프로필 div    storycards_top_profile
 *
-*                       7. 스토리카드 프로필 이미지 div    stroycards_profile_image
+*                       7. 스토리카드 프로필 이미지 div    stroycards_top_profile_image
 *
-*                       7. 스토리카드 프로필 이름 div     storycards_profile_name
+*                       7. 스토리카드 프로필 이름 div     storycards_top_profile_name
 *
-*                   6. 스토리카드 상단 옵션 div     storycards_option
+*                   6. 스토리카드 상단 옵션 div     storycards_top_option
 *
 *           4. 스토리카드 중단 div     storycards_middle
 *
-*               5. 스토리카드 중단 캐러셀 div     storycards_carresel
+*               5. 스토리카드 중단 캐러셀 div     storycards_middle_carousel
 *
-*                   6. 스토리카드 캐러셀 이미지 div storycards_carresel_image
+*                   6. 스토리카드 캐러셀 이미지 div storycards_middle_carousel_image
 *
-*               5. 스토리카드 중단 이미지 넘기기 아이콘 div     storycards_nextimage
+*               5. 스토리카드 중단 이미지 넘기기 아이콘 div     storycards_middle_nextimage
 *
-*               5. 스토리카드 중단 태그 유저 아이콘 div       storycards_taguser
+*               5. 스토리카드 중단 태그 유저 아이콘 div       storycards_middle_taguser
 *
-*               5. 스토리카드 중단 음소거 아이콘 div     storycards_muteicon
+*               5. 스토리카드 중단 음소거 아이콘 div     storycards_middle_muteicon
 *
-*               5. 스토리카드 중단 아이콘즈 div        storycards_icons
+*               5. 스토리카드 중단 아이콘즈 div        storycards_middle_icons
 *
-*                   6. 스토리카드 아이콘즈 flex div      storycards_icons_flex
+*                   6. 스토리카드 아이콘즈 flex div      storycards_middle_icons_flex
 *
-*                       7. 스토리카드 레프트 아이콘 div        storycards_icons_left
+*                       7. 스토리카드 레프트 아이콘 div        storycards_middle_icons_left
 *
-*                           8. 스토리카드 레프트 아이콘 하트 div     storycards_icons_left_heart
+*                           8. 스토리카드 레프트 아이콘 하트 div     storycards_middle_icons_left_heart
 *
-*                           8. 스토리카드 레프트 아이콘 코멘트 div    storycards_icons_left_comment
+*                           8. 스토리카드 레프트 아이콘 코멘트 div    storycards_middle_icons_left_comment
 *
-*                           8. 스토리카드 레프트 아이콘 익스플로어 div      storycards_icons_left_explore
+*                           8. 스토리카드 레프트 아이콘 익스플로어 div      storycards_middle_icons_left_explore
 *
-*                       7. 스토리카드 미들 아이콘 div         storycards_icons_middle
+*                       7. 스토리카드 미들 아이콘 div         storycards_middle_icons_middle
 *
-*                           8. 스토리카드 미들 아이콘 스테이터스 div   storycards_icons_middle_status
+*                           8. 스토리카드 미들 아이콘 스테이터스 div   storycards_middle_icons_middle_status
 *
-*                       7. 스토리카드 라이트 아이콘 div        storycards_icons_right
+*                       7. 스토리카드 라이트 아이콘 div        storycards_middle_icons_right
 *
-*                           8. 스토리카드 라이트 아이콘 북마크 div        storycards_icons_right_bookmark
+*                           8. 스토리카드 라이트 아이콘 북마크 div        storycards_middle_icons_right_bookmark
 *
 *           4. 스토리카드 하단 div     storycards_bottom
 *
