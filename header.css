@@ -48,6 +48,7 @@ header {
     height: 36px;
     border-radius: 8px;
     padding: 3px 16px;
+    box-sizing: border-box;
 }
 
 /* 헤더 아이콘 영역 div */
@@ -85,13 +86,15 @@ header {
 }
 
 
-.searchbar_wrap > div, .searchbar_wrap > div >input {
-    width: 268px;
-    height: 36px;
-}
+/*.searchbar_wrap > div, .searchbar_wrap > div >input {*/
+/*    width: 268px;*/
+/*    height: 36px;*/
+/*}*/
 
 /* 헤더 검색 인풋 태그 */
 .searchbar_input {
+    width: 236px;
+    height: 35px;
     font-size: 16px;
     background: rgba(255,255,255,-1);
     border: 0;
@@ -99,6 +102,7 @@ header {
     line-height: 18px;
     z-index: 3;
     position: absolute;
+    box-sizing: border-box;
 }
 
 /* 헤더 검색 가짜 인풋1 div */
