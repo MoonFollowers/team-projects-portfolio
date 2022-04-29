@@ -280,5 +280,20 @@ main {
     background-color: #53c1ff;
     width: 614px;
     height: 85px;
+    display: flex;
+    flex-direction: row;
+}
 
+/* 프레젠테이션 margin div */
+.presentation_margin {
+    background-color: black;
+    width: 22px;
+    height: 85px;
+}
+
+/* 프레젠테이션 프로필 */
+.presentation_profile {
+    background-color: #5a92ff;
+    width: 592px;
+    height: 85px;
 }
