@@ -188,4 +188,9 @@ header {
 /**/
 /**/
 
-
+main {
+    max-width: 935px;
+    background-color: darkred;
+    height: 3000px;
+    margin: 30px auto;
+}
