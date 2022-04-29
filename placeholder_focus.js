@@ -22,24 +22,24 @@ function hide_fakeinput() {
 
 function show_fakeinput(){
 
-    // 헤더 검색 인풋 태그의 엘리멘트 가져오기
-const is_focus = document.getElementsByClassName('searchbar_input')
-// 헤더 검색 인풋 태그의 플레이스 홀더 값 가져오기
-const fake_ph = document.querySelector('.searchbar_input').placeholder
-
-// 헤더 가짜 인풋 아이템들의 값 가져오기
-const fake_icon = document.querySelector('.searchbar_icon')
-const fake_span = document.querySelector('.searchbar_span')
-
-//    포커스 아웃이라면 (이벤트 리스너)
-is_focus.addEventListener('focusout', (event) => {
-    console.log('indside eventListener')
-    // 거기에 인풋 태그가 검색이라면
-    if (fake_ph === '검색') {
-        fake_icon.style.display = 'block'
-        fake_span.style.display = 'block'
-    }
-})
+//     // 헤더 검색 인풋 태그의 엘리멘트 가져오기
+// const is_focus = document.getElementsByClassName('searchbar_input')
+// // 헤더 검색 인풋 태그의 플레이스 홀더 값 가져오기
+// const fake_ph = document.querySelector('.searchbar_input').placeholder
+//
+// // 헤더 가짜 인풋 아이템들의 값 가져오기
+// const fake_icon = document.querySelector('.searchbar_icon')
+// const fake_span = document.querySelector('.searchbar_span')
+//
+// //    포커스 아웃이라면 (이벤트 리스너)
+// is_focus.addEventListener('focusout', (event) => {
+//     console.log('indside eventListener')
+//     // 거기에 인풋 태그가 검색이라면
+//     if (fake_ph === '검색') {
+//         fake_icon.style.display = 'block'
+//         fake_span.style.display = 'block'
+//     }
+// })
 
 }
 
