@@ -137,6 +137,14 @@ header {
     top: 28px;
 }
 
+/* 헤더 아이콘 flex div */
+.icons_flex {
+    display: flex;
+    flex-direction: row;
+    padding-left: 24px;
+    flex: 1 0 127px;
+    position: relative;
+}
 
 /* 헤더 아이콘 사이즈 일괄 */
 .icons_icons {
