@@ -57,10 +57,10 @@ header {
     width: 333.5px;
     height: 24px;
     display: flex;
-    flex: 1 0 127px;
     flex-direction: row;
     justify-content: flex-end;
     position: relative;
+    box-sizing: border-box;
 }
 
 /* 헤더 홈버튼 a */
@@ -117,7 +117,7 @@ header {
     padding: 0 16px;
     position: absolute;
     top: 18px;
-    left: 42%;
+    left: 43%;
     z-index: 2;
 }
 
