@@ -218,6 +218,8 @@ main {
     background-color: #d049ff;
     width: 614px;
     height: 119px;
+    box-sizing: border-box;
+    padding: 16px 0;
 }
 
 /* 스토리 필드 > 스토리카드 부분 */
@@ -271,4 +273,12 @@ main {
     background-color: #c4c4c4;
     width: 293px;
     height: 129px;
+}
+
+/* 프레젠테이션 flex */
+.presentation_flex {
+    background-color: #53c1ff;
+    width: 614px;
+    height: 85px;
+
 }
