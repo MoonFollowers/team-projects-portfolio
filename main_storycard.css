@@ -72,3 +72,19 @@
     justify-content: center;
     align-items: center;
 }
+
+/**/
+/* 스토리카드 미들 파트 */
+/**/
+
+
+/* 스토리카드 미들 캐러셀 div */
+.storycards_middle_carousel {
+    width: 614px;
+    height: 767.5px;
+}
+.storycards_middle_carousel_image {
+    background-color: white;
+    width: 614px;
+    height: 767.5px;
+}

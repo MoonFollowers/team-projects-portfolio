@@ -116,7 +116,9 @@
 *
 *                   6. 스토리카드 캐러셀 이미지 div storycards_middle_carousel_image
 *
-*               5. 스토리카드 중단 이미지 넘기기 아이콘 div     storycards_middle_nextimage
+*               5. 스토리카드 중단 이미지 넘기기 아이콘 div     storycards_middle_next
+*
+*               5. 스토리카드 중단 이미지 돌리기 아이콘 div     storycards_middle_prev
 *
 *               5. 스토리카드 중단 태그 유저 아이콘 div       storycards_middle_taguser
 *
