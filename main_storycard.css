@@ -205,3 +205,29 @@
     justify-content: center;
     align-items: center;
 }
+
+/* 스토리카드 하단 아이콘즈 middle div */
+.storycards_bottom_icons_middle {
+    width: 422px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 스토리카드 하단 아이콘즈 스테이터스 div */
+.storycards_bottom_icons_middle_status {
+    width: 454px;
+    height: 6px;
+    margin-top: 16px;
+    /* 하위 아이템을 수평, 수직 가운데 정렬하는 코드 */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 스테이터스 아이콘 크기 및 여백 */
+.s6 {
+    font-size: 6px;
+    margin-right: 6px;
+}
