@@ -1,6 +1,7 @@
 /* 스토리카드 상위 플렉스 div */
 /* 좌측에 프로필, 우측에 옵션을 정렬하는 플렉스 */
 .storycards_top_flex {
+    /*background-color: black;*/
     width: 566px;
     height: 70px;
     display: flex;
