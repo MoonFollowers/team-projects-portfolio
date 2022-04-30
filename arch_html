@@ -86,6 +86,8 @@
 *
 *                       7. 프로필 이미지 div   presentation_profile_image
 *
+*                           8. 프로필 이미지 캔버스 canvas       presentation_image_canvas
+*
 *                       7. 프로필 이름 a     presentation_profile_name
 *
 *       3. 스토리카드 div    wrap_storycards

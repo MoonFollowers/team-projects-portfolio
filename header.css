@@ -292,9 +292,16 @@ main {
     height: 85px;
 }
 
-/* 프레젠테이션 프로필 */
-.presentation_profile {
+/* 프레젠테이션 프로필 묶음 div */
+.presentation_list {
     background-color: #5a92ff;
     width: 592px;
+    height: 85px;
+}
+
+/* 프레젠테이션 프로필 div */
+.presentation_profile {
+    background-color: #75db64;
+    width: 80px;
     height: 85px;
 }
