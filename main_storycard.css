@@ -168,3 +168,12 @@
 .s12 {
     font-size: 28px;
 }
+
+.storycards_bottom_icons {
+    width: 614px;
+    height: 54px;
+    box-sizing: border-box;
+    background-color: #69dbff;
+    padding: 7px 16px;
+}
+

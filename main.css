@@ -66,14 +66,14 @@ main {
 .storycards_middle {
     background-color: #62ffc6;
     width: 614px;
-    height: 803.5px;
+    height: 767.5px;
 }
 
 /* 스토리카드 > 바텀 부분 */
 .storycards_bottom {
     background-color: #15993a;
     width: 614px;
-    height: 177px;
+    height: 213px;
 }
 
 /* 푸터필드 > 프로필 부분 */
