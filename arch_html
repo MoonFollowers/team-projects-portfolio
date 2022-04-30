@@ -84,9 +84,11 @@
 *
 *                   6. 프레젠테이션 프로필 div   presentation_profile
 *
-*                       7. 프로필 이미지 div   presentation_profile_image
+*                       7. 프로필 이미지 묶음 div   presentation_profile_image
 *
-*                           8. 프로필 이미지 캔버스 canvas       presentation_image_canvas
+*                           8. 프로필 이미지 테두리 div      presentation_profile_border
+*
+*                           8. 프로필 이미지 div       presentation_image_canvas
 *
 *                       7. 프로필 이름 a     presentation_profile_name
 *
