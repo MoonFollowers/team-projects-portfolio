@@ -191,7 +191,7 @@ header {
 /* 메인태그 */
 main {
     max-width: 935px;
-    background-color: darkred;
+    /*background-color: darkred;*/
     height: 3000px;
     margin: 30px auto;
     display: flex;
@@ -200,7 +200,7 @@ main {
 
 /* 메인태그 > 스토리카드 부분 */
 .field_story {
-    background-color: #ff7a7a;
+    /*background-color: #ff7a7a;*/
     width: 614px;
     height: 2000px;
     margin-right: 28px;
@@ -215,11 +215,14 @@ main {
 
 /* 스토리 필드 > 프레젠테이션 부분 */
 .wrap_presentation {
-    background-color: #d049ff;
+    background-color: #fff;
     width: 614px;
     height: 119px;
     box-sizing: border-box;
     padding: 16px 0;
+
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
 }
 
 /* 스토리 필드 > 스토리카드 부분 */
@@ -342,9 +345,9 @@ main {
     /*background-color: orangered;*/
     width: 64px;
     height: 16px;
-    font-size: 8px;
+    font-size: 11px;
     text-align: center;
-    color: #dbdbdb;
+    color: #8e8e8e;
 }
 
 /* 프로필 이미지 테두리 div */
