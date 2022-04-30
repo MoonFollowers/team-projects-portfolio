@@ -43,11 +43,12 @@ main {
 
 /* 스토리 필드 > 스토리카드 부분 */
 .wrap_storycards {
-    background-color: #6bff83;
+    /*background-color: #fff;*/
     width: 614px;
     height: 1053px;
     margin-top: 24px;
-
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
 }
 
 /* 스토리카드 > 탑 부분 */
