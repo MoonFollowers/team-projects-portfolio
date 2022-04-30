@@ -2,10 +2,11 @@
 /* 좌측에 프로필, 우측에 옵션을 정렬하는 플렉스 */
 .storycards_top_flex {
     /*background-color: black;*/
-    width: 566px;
+    width: 614px;
     height: 70px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 /* 스토리카드 프로필 div */
@@ -18,4 +19,15 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+}
+
+/* 스토리카드 옵션 div */
+.storycards_top_option {
+    background-color: #ffad62;
+    width: 48px;
+    height: 40px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 15px 0 15px 0;
 }
