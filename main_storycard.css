@@ -84,7 +84,10 @@
     height: 767.5px;
 }
 .storycards_middle_carousel_image {
-    background-color: white;
+
     width: 614px;
     height: 767.5px;
+    background-image: url("https://cdn.wallpapersafari.com/45/96/IW4T2D.jpg");
+    background-size: cover;
+    background-position: center;
 }

@@ -58,6 +58,8 @@ main {
     height: 70px;
     display: flex;
     flex-direction: row;
+    /*border: 1px solid #dbdbdb;*/
+    box-shadow:  0 4px 2px -2px gray;
 }
 
 /* 스토리카드 > 미들 부분 */
