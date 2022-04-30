@@ -91,3 +91,43 @@
     background-size: cover;
     background-position: center;
 }
+
+/* 스토리카드 미들 넘기기 버튼 div */
+.storycards_middle_next {
+    width: 46px;
+    height: 62px;
+    padding: 16px 8px;
+    /* 하위 아이템을 수평, 수직 가운데 정렬하는 코드 */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+/*    강제 위치조정 */
+    position: absolute;
+    top: 650px;
+    left: 55%;
+    color: #dbdbdb;
+}
+
+/* 스토리카드 미들 되돌리기 버튼 div */
+.storycards_middle_prev {
+    width: 46px;
+    height: 62px;
+    padding: 16px 8px;
+    /* 하위 아이템을 수평, 수직 가운데 정렬하는 코드 */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+/*    강제 위치조정 */
+    position: absolute;
+    top: 650px;
+    left: 19%;
+    color: #dbdbdb;
+}
+
+/* 스토리카드 넘기기, 되돌리기 아이콘 공통 속성 */
+.btn_next, .btn_prev {
+    font-size: 30px;
+}
+
