@@ -145,12 +145,13 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: 0;
 }
+
+/* 스토리카드 태그 유저 아이콘 div */
 
 /* 뮤트아이콘, 태그유저 크기 */
 .s12 {
     font-size: 28px;
-
 }
