@@ -19,6 +19,9 @@ header {
     height: 60px;
     box-shadow: 0 4px 4px -4px #dbdbdb;
     /*border: 1px solid #dbdbdb;*/
+    position: fixed;
+    z-index: 4;
+    top: 0;
 }
 
 /* 내비게이션 바 전체 */

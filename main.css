@@ -9,7 +9,7 @@ main {
     max-width: 935px;
     /*background-color: darkred;*/
     height: 3000px;
-    margin: 30px auto;
+    margin: 90px auto;
     display: flex;
     flex-direction: row;
 }
