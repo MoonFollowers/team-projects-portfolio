@@ -174,7 +174,7 @@
     width: 614px;
     height: 54px;
     box-sizing: border-box;
-    background-color: #69dbff;
+    /*background-color: #69dbff;*/
     padding: 7px 16px;
 }
 
@@ -184,7 +184,7 @@
     height: 40px;
     display: flex;
     flex-direction: row;
-    background-color: #8e8e8e;
+    /*background-color: #8e8e8e;*/
 }
 
 /* 스토리카드 하단 아이콘즈 left div */

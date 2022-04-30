@@ -71,7 +71,7 @@ main {
 
 /* 스토리카드 > 바텀 부분 */
 .storycards_bottom {
-    background-color: #15993a;
+    /*background-color: #15993a;*/
     width: 614px;
     height: 213px;
 }
