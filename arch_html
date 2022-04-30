@@ -104,6 +104,10 @@
 *
 *                       7. 스토리카드 프로필 이름 div     storycards_top_profile_name
 *
+*                           8. 스토리카드 프로필 닉네임 div    storycards_top_profile_name_nickname
+*
+*                           8. 스토리카드 프로필 위치 div     storycards_top_profile_name_location
+*
 *                   6. 스토리카드 상단 옵션 div     storycards_top_option
 *
 *           4. 스토리카드 중단 div     storycards_middle
