@@ -53,7 +53,7 @@ main {
 
 /* 스토리카드 > 탑 부분 */
 .storycards_top {
-    background-color: #c4c4c4;
+    background-color: #fff;
     width: 614px;
     height: 70px;
     display: flex;
