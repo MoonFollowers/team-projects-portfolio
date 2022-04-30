@@ -150,6 +150,19 @@
 }
 
 /* 스토리카드 태그 유저 아이콘 div */
+.storycards_middle_taguser {
+    width: 44px;
+    height: 44px;
+    margin: 0 0 16px 16px;
+    /* 하위 아이템을 수평, 수직 가운데 정렬하는 코드 */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 
 /* 뮤트아이콘, 태그유저 크기 */
 .s12 {
