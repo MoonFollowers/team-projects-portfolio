@@ -80,11 +80,13 @@
 *
 *               5. 프레젠테이션 여백 div    presentation_margin
 *
-*               5. 프레젠테이션 프로필 div   presentation_profile
+*               5. 프레젠테이션 프로필 묶음 div   presentation_list
 *
-*                   6. 프로필 이미지 div   presentation_profile_image
+*                   6. 프레젠테이션 프로필 div   presentation_profile
 *
-*                   6. 프로필 이름 a     presentation_profile_name
+*                       7. 프로필 이미지 div   presentation_profile_image
+*
+*                       7. 프로필 이름 a     presentation_profile_name
 *
 *       3. 스토리카드 div    wrap_storycards
 *
