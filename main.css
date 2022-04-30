@@ -55,7 +55,9 @@ main {
 .storycards_top {
     background-color: #c4c4c4;
     width: 614px;
-    height: 71px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
 }
 
 /* 스토리카드 > 미들 부분 */
