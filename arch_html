@@ -176,11 +176,13 @@
 *
 *               5. 스토리카드 하단 댓글 div      storycards_bottom_comment
 *
-*                   6. 스토리카드 하단 댓글 이모지 추가 div       storycards_bottom_comment_emoji
+*                   6. 스토리카드 하단 댓글 flex div     storycards_bottom_comment_flex
 *
-*                   6. 스토리카드 하단 댓글 인풋 div           storycards_bottom_comment_input
+*                       7. 스토리카드 하단 댓글 이모지 추가 div       storycards_bottom_comment_emoji
 *
-*                   6. 스토리카드 하단 댓글 게시버튼 div     storycards_bottom_comment_postbtn
+*                       7. 스토리카드 하단 댓글 인풋 div           storycards_bottom_comment_input
+*
+*                       7. 스토리카드 하단 댓글 게시버튼 div     storycards_bottom_comment_postbtn
 *
 *   2. 푸터필드 field_footer
 *
