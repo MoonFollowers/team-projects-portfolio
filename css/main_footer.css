@@ -227,19 +227,24 @@
     height: 40px;
     margin-bottom: 16px;
     max-width: 100%;
-
 }
 
 /* 푸터 정보 리스트 div */
 .footer_info_list {
-    width: 325px;
+    width: 270px;
     height: 37px;
     font-size: 10px;
     color: #8e8e8e;
     list-style: none;
 }
 
+.footer_info_list > li {
+    float: left;
+}
+
 /* 리스트 뒤에 점 넣기 */
 .footer_info_list > li:not(:last-of-type)::after {
     content: '\00B7';
+    margin: 0 0.25em 0 0.25em;
+
 }
