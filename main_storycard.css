@@ -312,8 +312,36 @@
 /* 스토리카드 하단 스토리 div */
 .storycards_bottom_story {
     width: 614px;
-    height: 44px;
+    height: 78px;
     display: flex;
+    padding: 0 16px;
+    box-sizing: border-box;
     flex-direction: column;
     background-color: #ffad62;
+}
+
+/* 스토리카드 하단 스토리 유저 div */
+.storycards_bottom_story_user {
+    width: 582px;
+    height: 18px;
+    display: flex;
+    flex-direction: row;
+    background-color: #e375ff;
+    margin-bottom: 4px;
+}
+
+/* 스토리카드 하단 스토리 댓글보기 div */
+.storycards_bottom_story_viewcomment {
+    width: 582px;
+    height: 18px;
+    background-color: #e375ff;
+    margin-bottom: 4px;
+}
+
+/* 스토리카드 하단 스토리 포스트 div */
+.storycards_bottom_story_post {
+    width: 582px;
+    height: 18px;
+    background-color: #e375ff;
+    margin-bottom: 16px;
 }
