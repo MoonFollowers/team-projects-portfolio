@@ -1,0 +1,54 @@
+/* 메인태그 > 푸터 부분 */
+.field_footer {
+    background-color: #69dbff;
+    width: 293px;
+    height: 1000px;
+}
+
+/* 푸터필드 > 프로필 부분 */
+.footer_profile {
+    background-color: #ffad62;
+    width: 293px;
+    height: 56px;
+    margin: 18px 0 10px 0;
+}
+
+/* 푸터필드 > 추천 부분 */
+.footer_recommend {
+    background-color: #ff8484;
+    width: 293px;
+    height: 291px;
+    margin-bottom: 12px;
+}
+
+/* 푸터필드 > 정보 부분 */
+.footer_info {
+    background-color: #c4c4c4;
+    width: 293px;
+    height: 129px;
+}
+
+/* 푸터 전체 플렉스 div */
+.footer_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 푸터 프로필 플렉스 */
+.footer_profile_flex {
+    width: 293px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 푸터 프로필 이미지 div */
+.footer_profile_image {
+    width: 56px;
+    height: 56px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_ui-TCUvXK4uPaSf1f7j7aLBe9ca7ycRv2Q&usqp=CAU");
+    background-size: cover;
+    background-position: center;
+}

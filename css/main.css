@@ -22,13 +22,6 @@ main {
     margin-right: 28px;
 }
 
-/* 메인태그 > 푸터 부분 */
-.field_footer {
-    background-color: #69dbff;
-    width: 293px;
-    height: 1000px;
-}
-
 /* 스토리 필드 > 프레젠테이션 부분 */
 .wrap_presentation {
     background-color: #fff;
@@ -76,26 +69,4 @@ main {
     height: 213px;
 }
 
-/* 푸터필드 > 프로필 부분 */
-.footer_profile {
-    background-color: #ffad62;
-    width: 293px;
-    height: 56px;
-    margin: 18px 0 10px 0;
-}
-
-/* 푸터필드 > 추천 부분 */
-.footer_recommend {
-    background-color: #ff8484;
-    width: 293px;
-    height: 291px;
-    margin-bottom: 12px;
-}
-
-/* 푸터필드 > 정보 부분 */
-.footer_info {
-    background-color: #c4c4c4;
-    width: 293px;
-    height: 129px;
-}
 
