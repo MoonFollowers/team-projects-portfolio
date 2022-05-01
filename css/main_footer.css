@@ -16,7 +16,7 @@
 /* 푸터필드 > 추천 부분 */
 .footer_recommend {
     background-color: #ff8484;
-    width: 325px;
+    width: 293px;
     height: 291px;
     margin-bottom: 12px;
 }
@@ -88,4 +88,35 @@
     color: #0095f6;
     font-weight: bold;
     font-size: 11px;
+}
+
+/* 푸터 프로필 추천 상단 div */
+.footer_recommend_top {
+    width: 293px;
+    height: 19px;
+    margin-top: 12px;
+    padding: 4px 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    background-color: #62ffc6;
+}
+
+/* 푸터 프로필 상단 소개 div */
+.footer_recommend_top_intro {
+    width: 221px;
+    height: 11px;
+    /*background-color: azure;*/
+    color: #8e8e8e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 푸터 프로필 상단 보기 div */
+.footer_recommend_top_view {
+    width: 71px;
+    height: 11px;
+    /*background-color: gold;*/
+    font-size: 13px;
+    font-weight: bold;
 }
