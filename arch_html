@@ -168,6 +168,8 @@
 *
 *                       7. 스토리카드 하단 스토리 더보기 버튼 div      storycards_bottom_story_morebtn
 *
+*                   6. 스토리카드 하단 스토리 댓글보기 div    storycards_bottom_story_viewcomment
+*
 *                   6. 스토리카드 하단 스토리 작성일자 div    storycards_bottom_story_post
 *
 *               5. 스토리카드 하단 댓글 div      storycards_bottom_comment
