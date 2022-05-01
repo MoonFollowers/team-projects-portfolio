@@ -176,7 +176,6 @@
     box-sizing: border-box;
     /*background-color: #69dbff;*/
     padding: 7px 16px;
-    margin-bottom: 8px;
 }
 
 /* 스토리카드 하단 아이콘즈 flex div */
@@ -313,7 +312,7 @@
 /* 스토리카드 하단 스토리 div */
 .storycards_bottom_story {
     width: 614px;
-    height: 82px;
+    height: 76px;
     display: flex;
     padding: 0 16px;
     box-sizing: border-box;
@@ -347,7 +346,7 @@
     width: 582px;
     height: 18px;
     /*background-color: #e375ff;*/
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     font-size: 10px;
     color: #8e8e8e;
 }
@@ -367,10 +366,9 @@
 .storycards_bottom_comment {
     width: 614px;
     height: 52px;
-    margin-top: 6px;
     padding: 6px 16px;
     box-sizing: border-box;
-    background-color: coral;
+    /*background-color: coral;*/
 }
 
 /* 스토리카드 하단 코멘트 flex div */
