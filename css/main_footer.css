@@ -26,6 +26,10 @@
     background-color: #c4c4c4;
     width: 325px;
     height: 129px;
+    padding-bottom: 38px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 푸터 전체 플렉스 div */
