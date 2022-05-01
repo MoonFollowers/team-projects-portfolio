@@ -317,7 +317,7 @@
     padding: 0 16px;
     box-sizing: border-box;
     flex-direction: column;
-    background-color: #ffad62;
+    /*background-color: #ffad62;*/
 }
 
 /* 스토리카드 하단 스토리 내용부분 div */
@@ -326,8 +326,9 @@
     height: 18px;
     display: flex;
     flex-direction: row;
-    background-color: #e375ff;
+    /*background-color: #e375ff;*/
     margin-bottom: 4px;
+    font-size: 14px;
 }
 
 /* 스토리카드 하단 스토리 댓글보기 div */
@@ -344,4 +345,15 @@
     height: 18px;
     background-color: #e375ff;
     margin-bottom: 16px;
+}
+
+/* 스토리카드 하단 내용 유저 div */
+.storycards_bottom_story_user {
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+/* 스토리카드 하단 내용 더보기 버튼 */
+.storycards_bottom_story_morebtn > span {
+    color: #8e8e8e;
 }
