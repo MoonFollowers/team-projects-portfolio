@@ -1,6 +1,6 @@
 /* 메인태그 > 푸터 부분 */
 .field_footer {
-    /*background-color: #69dbff;*/
+    background-color: #69dbff;
     width: 293px;
     height: 1000px;
 }
@@ -15,15 +15,15 @@
 
 /* 푸터필드 > 추천 부분 */
 .footer_recommend {
-    /*background-color: #ff8484;*/
-    width: 293px;
+    background-color: #ff8484;
+    width: 325px;
     height: 291px;
     margin-bottom: 12px;
 }
 
 /* 푸터필드 > 정보 부분 */
 .footer_info {
-    /*background-color: #c4c4c4;*/
+    background-color: #c4c4c4;
     width: 293px;
     height: 129px;
 }
