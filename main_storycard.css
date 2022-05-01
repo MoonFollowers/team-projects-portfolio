@@ -320,8 +320,8 @@
     background-color: #ffad62;
 }
 
-/* 스토리카드 하단 스토리 유저 div */
-.storycards_bottom_story_user {
+/* 스토리카드 하단 스토리 내용부분 div */
+.storycards_bottom_story_detail {
     width: 582px;
     height: 18px;
     display: flex;
