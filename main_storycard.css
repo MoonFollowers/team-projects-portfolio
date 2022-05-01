@@ -361,3 +361,14 @@
 .storycards_bottom_story_morebtn > span {
     color: #8e8e8e;
 }
+
+/* 스토리카드 하단 코멘트 div */
+.storycards_bottom_comment {
+    width: 614px;
+    height: 52px;
+    margin-top: 10px;
+    padding: 6px 16px;
+    box-sizing: border-box;
+    background-color: coral;
+}
+
