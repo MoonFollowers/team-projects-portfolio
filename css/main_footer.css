@@ -1,13 +1,13 @@
 /* 메인태그 > 푸터 부분 */
 .field_footer {
-    background-color: #69dbff;
+    /*background-color: #69dbff;*/
     width: 293px;
     height: 1000px;
 }
 
 /* 푸터필드 > 프로필 부분 */
 .footer_profile {
-    background-color: #ffad62;
+    /*background-color: #ffad62;*/
     width: 293px;
     height: 56px;
     margin: 18px 0 10px 0;
@@ -15,7 +15,7 @@
 
 /* 푸터필드 > 추천 부분 */
 .footer_recommend {
-    background-color: #ff8484;
+    /*background-color: #ff8484;*/
     width: 293px;
     height: 291px;
     margin-bottom: 12px;
@@ -23,7 +23,7 @@
 
 /* 푸터필드 > 정보 부분 */
 .footer_info {
-    background-color: #c4c4c4;
+    /*background-color: #c4c4c4;*/
     width: 293px;
     height: 129px;
 }
@@ -77,5 +77,15 @@
     height: 11px;
     font-size: 14px;
     margin-top: 8px;
-    color: #8e8e8e;
+    /*color: #8e8e8e;*/
+}
+
+/* 푸터 프로필 전환 버튼 div */
+.footer_profile_user_change {
+    width: 24px;
+    height: 11px;
+    margin-left: 8px;
+    color: #0095f6;
+    font-weight: bold;
+    font-size: 11px;
 }
