@@ -335,8 +335,10 @@
 .storycards_bottom_story_viewcomment {
     width: 582px;
     height: 18px;
-    background-color: #e375ff;
+    /*background-color: #e375ff;*/
     margin-bottom: 4px;
+    font-size: 14px;
+    color: #8e8e8e;
 }
 
 /* 스토리카드 하단 스토리 포스트 div */
