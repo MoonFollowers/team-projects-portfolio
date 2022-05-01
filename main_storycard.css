@@ -393,6 +393,7 @@
     /*background-color: #8e8e8e;*/
 }
 
+/* 스토리카드 하단 코멘트 인풋 input */
 .storycards_bottom_comment_input > input {
     width: 514px;
     height: 18px;
@@ -402,6 +403,22 @@
     margin-top: 11px;
 }
 
+/* 스토리태그 하단 코멘드 포스팅 버튼 div */
+.storycards_bottom_comment_postbtn {
+    width: 28px;
+    height: 40px;
+    /* 하위 아이템을 수평, 수직 가운데 정렬하는 코드 */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #8e8e8e;*/
+}
+.storycards_bottom_comment_postbtn > a {
+    font-size: 16px;
+    color: #0095f6;
+    font-weight: bold;
+}
 
 
 
