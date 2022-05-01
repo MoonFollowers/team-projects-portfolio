@@ -176,6 +176,7 @@
     box-sizing: border-box;
     /*background-color: #69dbff;*/
     padding: 7px 16px;
+    margin-bottom: 8px;
 }
 
 /* 스토리카드 하단 아이콘즈 flex div */
@@ -366,9 +367,11 @@
 .storycards_bottom_comment {
     width: 614px;
     height: 52px;
-    margin-top: 10px;
+    margin-top: 6px;
     padding: 6px 16px;
     box-sizing: border-box;
     background-color: coral;
 }
+
+
 
