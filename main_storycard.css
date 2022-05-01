@@ -267,6 +267,7 @@
     height: 24px;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 /* 좋아요 아이콘 div */
@@ -275,7 +276,17 @@
     height: 24px;
     border-radius: 50%;
 }
-
-.storycards_bottom_likes_span {
-
+.likes_icon1, .likes_icon2, .likes_icon3 {
+    position: absolute;
+}
+.likes_icon1{
+    z-index: 3;
+}
+.likes_icon2 {
+    left: 12px;
+    z-index: 2;
+}
+.likes_icon3 {
+    left: 24px;
+    z-index: 1;
 }
