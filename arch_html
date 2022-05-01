@@ -158,15 +158,15 @@
 *
 *                   6. 스토리카드 하단 좋아요 스팬      storycards_bottom_likes_span
 *
-*                   6. 스토리카드 하단 좋아요 개수      storycards_bottom_likes_count
-*
 *               5. 스토리카드 하단 스토리 div     storycards_bottom_story
 *
-*                   6. 스토리카드 하단 스토리 아이디 div     storycards_bottom_story_user
+*                   6. 스토리카드 하단 내용 부문 div       storycards_bottom_story_detail
 *
-*                   6. 스토리카드 하단 스토리 내용 div      storycards_bottom_story_simple
+*                       7. 스토리카드 하단 스토리 아이디 div     storycards_bottom_story_user
 *
-*                   6. 스토리카드 하단 스토리 더보기 버튼 div      storycards_bottom_story_morebtn
+*                       7. 스토리카드 하단 스토리 내용 div      storycards_bottom_story_data
+*
+*                       7. 스토리카드 하단 스토리 더보기 버튼 div      storycards_bottom_story_morebtn
 *
 *                   6. 스토리카드 하단 스토리 작성일자 div    storycards_bottom_story_post
 *
