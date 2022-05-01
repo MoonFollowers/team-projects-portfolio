@@ -90,7 +90,7 @@
     font-size: 11px;
 }
 
-/* 푸터 프로필 추천 상단 div */
+/* 푸터 추천 추천 상단 div */
 .footer_recommend_top {
     width: 293px;
     height: 19px;
@@ -102,7 +102,7 @@
     background-color: #62ffc6;
 }
 
-/* 푸터 프로필 상단 소개 div */
+/* 푸터 추천 상단 소개 div */
 .footer_recommend_top_intro {
     width: 221px;
     height: 11px;
@@ -112,7 +112,7 @@
     font-weight: bold;
 }
 
-/* 푸터 프로필 상단 보기 div */
+/* 푸터 추천 상단 보기 div */
 .footer_recommend_top_view {
     width: 71px;
     height: 11px;
@@ -120,3 +120,5 @@
     font-size: 13px;
     font-weight: bold;
 }
+
+/* 푸터 추천 중단*/
