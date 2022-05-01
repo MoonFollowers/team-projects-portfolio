@@ -243,3 +243,21 @@
     justify-content: center;
     align-items: center;
 }
+
+/* 스토리카드 하단부 파트 */
+.storycards_bottom_likes {
+    width: 614px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.storycards_bottom_likes_span {
+    background-color: #69dbff;
+    width: 582px;
+    height: 24px;
+    padding: 0 16px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
