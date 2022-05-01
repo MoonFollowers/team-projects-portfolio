@@ -250,6 +250,7 @@
     height: 24px;
     display: flex;
     flex-direction: row;
+    margin-bottom: 8px;
 }
 
 .storycards_bottom_likes_flex {
@@ -257,7 +258,6 @@
     width: 582px;
     height: 24px;
     padding: 0 16px;
-    margin-bottom: 8px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -279,16 +279,20 @@
     height: 24px;
     border-radius: 50%;
 }
+
 .likes_icon1, .likes_icon2, .likes_icon3 {
     position: absolute;
 }
-.likes_icon1{
+
+.likes_icon1 {
     z-index: 3;
 }
+
 .likes_icon2 {
     left: 12px;
     z-index: 2;
 }
+
 .likes_icon3 {
     left: 24px;
     z-index: 1;
@@ -300,6 +304,16 @@
     height: 24px;
     font-size: 14px;
 }
+
 .like_user, .like_count {
     font-weight: bold;
+}
+
+/* 스토리카드 하단 스토리 div */
+.storycards_bottom_story {
+    width: 614px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffad62;
 }
