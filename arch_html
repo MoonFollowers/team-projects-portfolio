@@ -156,6 +156,8 @@
 *
 *               5. 스토리카드 하단 좋아요 div     storycards_bottom_likes
 *
+*                   6. 좋아요 아이콘  div     storycards_bottom_likes_icons
+*
 *                   6. 스토리카드 하단 좋아요 스팬      storycards_bottom_likes_span
 *
 *               5. 스토리카드 하단 스토리 div     storycards_bottom_story
