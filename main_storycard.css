@@ -312,7 +312,7 @@
 /* 스토리카드 하단 스토리 div */
 .storycards_bottom_story {
     width: 614px;
-    height: 78px;
+    height: 82px;
     display: flex;
     padding: 0 16px;
     box-sizing: border-box;
@@ -336,7 +336,7 @@
     width: 582px;
     height: 18px;
     /*background-color: #e375ff;*/
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-size: 14px;
     color: #8e8e8e;
 }
@@ -345,8 +345,10 @@
 .storycards_bottom_story_post {
     width: 582px;
     height: 18px;
-    background-color: #e375ff;
+    /*background-color: #e375ff;*/
     margin-bottom: 16px;
+    font-size: 10px;
+    color: #8e8e8e;
 }
 
 /* 스토리카드 하단 내용 유저 div */
