@@ -373,5 +373,24 @@
     background-color: coral;
 }
 
+/* 스토리카드 하단 코멘트 flex div */
+.storycards_bottom_comment_flex {
+    width: 582px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 스토리카드 하단 코멘트 이모지 div */
+.storycards_bottom_comment_emoji {
+    width: 40px;
+    height: 40px;
+    /* 하위 아이템을 수평, 수직 가운데 정렬하는 코드 */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #8e8e8e;
+}
 
 
