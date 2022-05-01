@@ -395,7 +395,7 @@
 
 /* 스토리카드 하단 코멘트 인풋 input */
 .storycards_bottom_comment_input > input {
-    width: 514px;
+    width: 500px;
     height: 18px;
     background: rgba(255, 255, 255, -1);
     border: 0;
@@ -405,7 +405,7 @@
 
 /* 스토리태그 하단 코멘드 포스팅 버튼 div */
 .storycards_bottom_comment_postbtn {
-    width: 28px;
+    width: 42px;
     height: 40px;
     /* 하위 아이템을 수평, 수직 가운데 정렬하는 코드 */
     display: flex;
