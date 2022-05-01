@@ -369,6 +369,7 @@
     padding: 6px 16px;
     box-sizing: border-box;
     /*background-color: coral;*/
+    box-shadow: 0 -1px #dbdbdb;
 }
 
 /* 스토리카드 하단 코멘트 flex div */
