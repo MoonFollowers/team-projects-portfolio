@@ -123,6 +123,21 @@ header {
     box-sizing: border-box;
 }
 
+/* 헤더 검색 인풋 태그에 이미지 넣기 */
+.searchbar_input {
+    background-image: url("https://super.so/icon/dark/search.svg");
+    background-position: left;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding: 5px;
+    text-indent: 30px;
+}
+/* 헤더 인풋에 포커스가 들어가면 검색버튼 끄기 */
+.searchbar_input:focus {
+    background-image: none;
+    text-indent: 0;
+}
+
 /* 헤더 검색 가짜 인풋1 div */
 .searchbar_fake_input1 {
     width: 268px;
