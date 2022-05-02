@@ -250,3 +250,13 @@
     margin: 0 0.25em 0 0.25em;
 
 }
+
+/* 푸터 정보 회사 이름 div */
+.footer_info_corp {
+    width: 325px;
+    height: 14px;
+    color: #8e8e8e;
+    font-size: 12px;
+    margin-left: 30px;
+    box-sizing: border-box;
+}
