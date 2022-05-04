@@ -57,7 +57,7 @@ main {
 
 /* 스토리카드 > 미들 부분 */
 .storycards_middle {
-    background-color: #62ffc6;
+    /*background-color: #62ffc6;*/
     width: 614px;
     height: 767.5px;
 }

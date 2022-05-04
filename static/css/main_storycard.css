@@ -440,7 +440,8 @@
 
 .post_main_picture_img {
     width: 614px;
-    height: auto;
+    height: 775px;
+    object-fit: cover;
 }
 
 

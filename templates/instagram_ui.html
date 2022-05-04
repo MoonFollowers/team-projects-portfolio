@@ -211,29 +211,59 @@
             <!--            4. 스토리카드 중단 div -->
             <div class="storycards_middle">
                 <!--                5. 스토리카드 중단 캐러셀 div -->
-                <div class="storycards_middle_carousel">
-                    <!--                6. 스토리카드 캐러셀 이미지 div -->
-                    <div class="storycards_middle_carousel_image caro_1">
-                        <!--                7. 스토리카드 중단 이미지 넘기기 아이콘 div -->
-                        <div class="storycards_middle_next">
-                            <i class="fa-solid fa-circle-chevron-right btn_next"></i>
+                <div id="carousel-one" class="carousel slide" data-bs-ride="carousel">
+                    <!--                    캐러셀 인디케이터 -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-one" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="##carousel-one" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="##carousel-one" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!--                                캐러셀 아이템-->
+                        <div class="carousel-item active">
+                            <img class="carousel-img post_main_picture_img d-block w-100"
+                                 src="https://trees.gamemeca.com/wp-content/uploads/2019/11/191112_diablo2_2.jpg"
+                                 alt="...">
                         </div>
-                        <!--                7. 스토리카드 중단 이미지 되돌리기 아이콘 div -->
-                        <div class="storycards_middle_prev">
-                            <i class="fa-solid fa-circle-chevron-left btn_prev"></i>
+                        <div class="carousel-item">
+                            <img class="carousel-img post_main_picture_img d-block w-100"
+                                 src="https://i.redd.it/l5k1wclerzi61.jpg"
+                                 alt="...">
                         </div>
-                        <!--                7. 스토리카드 중단 태그 유저 아이콘 div -->
-                        <div class="storycards_middle_taguser">
-                            <!--                        8. 유저 아이콘 i -->
-                            <i class="fa-solid fa-circle-user s28"></i>
-                        </div>
-                        <!--                7. 스토리카드 중단 음소거 아이콘 div -->
-                        <div class="storycards_middle_muteicon">
-                            <!--                        8. 음소거 아이콘 i -->
-                            <i class="fa-solid fa-circle-xmark s28"></i>
+                        <div class="carousel-item">
+                            <img class="carousel-img post_main_picture_img d-block w-100"
+                                 src="https://p4.wallpaperbetter.com/wallpaper/570/244/986/diablo-diablo-immortal-diablo-2-diablo-3-reaper-of-souls-diablo-4-hd-wallpaper-preview.jpg"
+                                 alt="...">
                         </div>
                     </div>
+
+                    <!--                7. 스토리카드 중단 이미지 넘기기 아이콘 div -->
+                    <div class="storycards_middle_next"
+                         data-bs-target="#carousel-one"
+                         data-bs-slide="next">
+                        <i class="fa-solid fa-circle-chevron-right btn_next"></i>
+                    </div>
+                    <!--                7. 스토리카드 중단 이미지 되돌리기 아이콘 div -->
+                    <div class="storycards_middle_prev"
+                         data-bs-target="#carousel-one"
+                         data-bs-slide="prev">
+                        <i class="fa-solid fa-circle-chevron-left btn_prev"></i>
+                    </div>
+                    <!--                7. 스토리카드 중단 태그 유저 아이콘 div -->
+                    <div class="storycards_middle_taguser">
+                        <!--                        8. 유저 아이콘 i -->
+                        <i class="fa-solid fa-circle-user s28"></i>
+                    </div>
+                    <!--                7. 스토리카드 중단 음소거 아이콘 div -->
+                    <div class="storycards_middle_muteicon">
+                        <!--                        8. 음소거 아이콘 i -->
+                        <i class="fa-solid fa-circle-xmark s28"></i>
+                    </div>
                 </div>
+
             </div>
             <!--            4. 스토리카드 하단 div -->
             <div class="storycards_bottom">
@@ -361,69 +391,58 @@
             <!--            4. 스토리카드 중단 div -->
             <div class="storycards_middle">
                 <!--                5. 스토리카드 중단 캐러셀 div -->
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div id="carousel-two" class="carousel slide" data-bs-ride="carousel">
+                    <!--                    캐러셀 인디케이터 -->
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        <button type="button" data-bs-target="#carousel-two" data-bs-slide-to="0"
                                 class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        <button type="button" data-bs-target="##carousel-two" data-bs-slide-to="1"
                                 aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        <button type="button" data-bs-target="##carousel-two" data-bs-slide-to="2"
                                 aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
                         <!--                                캐러셀 아이템-->
                         <div class="carousel-item active">
-                            <img class="carousel-img post_main_picture_img"
-                                 src="https://images.pexels.com/photos/11662249/pexels-photo-11662249.jpeg?cs=srgb&dl=pexels-mathilde-langevin-11662249.jpg&fm=jpg"
-                                 class="d-block w-100" alt="...">
+                            <img class="carousel-img post_main_picture_img d-block w-100"
+                                 src="https://miro.medium.com/max/1400/1*HKzwO8fn-T9ZQT3a2CodXg.jpeg"
+                                 alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img class="carousel-img post_main_picture_img"
-                                 src="https://images.pexels.com/photos/11086696/pexels-photo-11086696.jpeg?cs=srgb&dl=pexels-irina-demyanovskikh-11086696.jpg&fm=jpg"
-                                 class="d-block w-100" alt="...">
+                            <img class="carousel-img post_main_picture_img d-block w-100"
+                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJA9xs5hxwhaqhqA18aA-kbv0_ysMgVd8F3A&usqp=CAU"
+                                 alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img class="carousel-img post_main_picture_img"
-                                 src="https://images.pexels.com/photos/8175058/pexels-photo-8175058.jpeg?cs=srgb&dl=pexels-lisa-fotios-8175058.jpg&fm=jpg"
-                                 class="d-block w-100" alt="...">
+                            <img class="carousel-img post_main_picture_img d-block w-100"
+                                 src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/a5/e9/63/a5e9638f-b605-515e-70c7-894faffb4aa7/contsched.lyaauxjc.lsr/1200x630bb.png"
+                                 alt="...">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <!--                7. 스토리카드 중단 이미지 넘기기 아이콘 div -->
+                    <div class="storycards_middle_next"
+                         data-bs-target="#carousel-two"
+                         data-bs-slide="next">
+                        <i class="fa-solid fa-circle-chevron-right btn_next"></i>
+                    </div>
+                    <!--                7. 스토리카드 중단 이미지 되돌리기 아이콘 div -->
+                    <div class="storycards_middle_prev"
+                         data-bs-target="#carousel-two"
+                         data-bs-slide="prev">
+                        <i class="fa-solid fa-circle-chevron-left btn_prev"></i>
+                    </div>
+                    <!--                7. 스토리카드 중단 태그 유저 아이콘 div -->
+                    <div class="storycards_middle_taguser">
+                        <!--                        8. 유저 아이콘 i -->
+                        <i class="fa-solid fa-circle-user s28"></i>
+                    </div>
+                    <!--                7. 스토리카드 중단 음소거 아이콘 div -->
+                    <div class="storycards_middle_muteicon">
+                        <!--                        8. 음소거 아이콘 i -->
+                        <i class="fa-solid fa-circle-xmark s28"></i>
+                    </div>
                 </div>
-                <!--                <div class="storycards_middle_carousel">-->
-                <!--                    &lt;!&ndash;                6. 스토리카드 캐러셀 이미지 div &ndash;&gt;-->
-                <!--                    <div class="storycards_middle_carousel_image caro_2">-->
-                <!--                        &lt;!&ndash;                7. 스토리카드 중단 이미지 넘기기 아이콘 div &ndash;&gt;-->
-                <!--                        <div class="storycards_middle_next">-->
-                <!--                            <i class="fa-solid fa-circle-chevron-right btn_next"></i>-->
-                <!--                        </div>-->
-                <!--                        &lt;!&ndash;                7. 스토리카드 중단 이미지 되돌리기 아이콘 div &ndash;&gt;-->
-                <!--                        <div class="storycards_middle_prev">-->
-                <!--                            <i class="fa-solid fa-circle-chevron-left btn_prev"></i>-->
-                <!--                        </div>-->
-                <!--                        &lt;!&ndash;                7. 스토리카드 중단 태그 유저 아이콘 div &ndash;&gt;-->
-                <!--                        <div class="storycards_middle_taguser">-->
-                <!--                            &lt;!&ndash;                        8. 유저 아이콘 i &ndash;&gt;-->
-                <!--                            <i class="fa-solid fa-circle-user s28"></i>-->
-                <!--                        </div>-->
-                <!--                        &lt;!&ndash;                7. 스토리카드 중단 음소거 아이콘 div &ndash;&gt;-->
-                <!--                        <div class="storycards_middle_muteicon">-->
-                <!--                            &lt;!&ndash;                        8. 음소거 아이콘 i &ndash;&gt;-->
-                <!--                            <i class="fa-solid fa-circle-xmark s28"></i>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
+
             </div>
             <!--            4. 스토리카드 하단 div -->
             <div class="storycards_bottom">
@@ -551,27 +570,55 @@
             <!--            4. 스토리카드 중단 div -->
             <div class="storycards_middle">
                 <!--                5. 스토리카드 중단 캐러셀 div -->
-                <div class="storycards_middle_carousel">
-                    <!--                6. 스토리카드 캐러셀 이미지 div -->
-                    <div class="storycards_middle_carousel_image caro_3">
-                        <!--                7. 스토리카드 중단 이미지 넘기기 아이콘 div -->
-                        <div class="storycards_middle_next">
-                            <i class="fa-solid fa-circle-chevron-right btn_next"></i>
+                <div id="carousel-three" class="carousel slide" data-bs-ride="carousel">
+                    <!--                    캐러셀 인디케이터 -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-three" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel-three" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel-three" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!--                                캐러셀 아이템-->
+                        <div class="carousel-item active">
+                            <img class="carousel-img post_main_picture_img d-block w-100"
+                                 src="https://images.pexels.com/photos/11662249/pexels-photo-11662249.jpeg?cs=srgb&dl=pexels-mathilde-langevin-11662249.jpg&fm=jpg"
+                                 alt="...">
                         </div>
-                        <!--                7. 스토리카드 중단 이미지 되돌리기 아이콘 div -->
-                        <div class="storycards_middle_prev">
-                            <i class="fa-solid fa-circle-chevron-left btn_prev"></i>
+                        <div class="carousel-item">
+                            <img class="carousel-img post_main_picture_img d-block w-100"
+                                 src="https://images.pexels.com/photos/11086696/pexels-photo-11086696.jpeg?cs=srgb&dl=pexels-irina-demyanovskikh-11086696.jpg&fm=jpg"
+                                 alt="...">
                         </div>
-                        <!--                7. 스토리카드 중단 태그 유저 아이콘 div -->
-                        <div class="storycards_middle_taguser">
-                            <!--                        8. 유저 아이콘 i -->
-                            <i class="fa-solid fa-circle-user s28"></i>
+                        <div class="carousel-item">
+                            <img class="carousel-img post_main_picture_img d-block w-100"
+                                 src="https://images.pexels.com/photos/8175058/pexels-photo-8175058.jpeg?cs=srgb&dl=pexels-lisa-fotios-8175058.jpg&fm=jpg"
+                                 alt="...">
                         </div>
-                        <!--                7. 스토리카드 중단 음소거 아이콘 div -->
-                        <div class="storycards_middle_muteicon">
-                            <!--                        8. 음소거 아이콘 i -->
-                            <i class="fa-solid fa-circle-xmark s28"></i>
-                        </div>
+                    </div>
+                    <!--                7. 스토리카드 중단 이미지 넘기기 아이콘 div -->
+                    <div class="storycards_middle_next"
+                         data-bs-target="#carousel-three"
+                         data-bs-slide="next">
+                        <i class="fa-solid fa-circle-chevron-right btn_next"></i>
+                    </div>
+                    <!--                7. 스토리카드 중단 이미지 되돌리기 아이콘 div -->
+                    <div class="storycards_middle_prev"
+                         data-bs-target="#carousel-three"
+                         data-bs-slide="prev">
+                        <i class="fa-solid fa-circle-chevron-left btn_prev"></i>
+                    </div>
+                    <!--                7. 스토리카드 중단 태그 유저 아이콘 div -->
+                    <div class="storycards_middle_taguser">
+                        <!--                        8. 유저 아이콘 i -->
+                        <i class="fa-solid fa-circle-user s28"></i>
+                    </div>
+                    <!--                7. 스토리카드 중단 음소거 아이콘 div -->
+                    <div class="storycards_middle_muteicon">
+                        <!--                        8. 음소거 아이콘 i -->
+                        <i class="fa-solid fa-circle-xmark s28"></i>
                     </div>
                 </div>
             </div>
@@ -676,7 +723,6 @@
         </div>
     </div>
 
-    </div>
     <!--    2. 푸터필드 field_footer -->
     <div class="field_footer">
         <!--        3. 푸터 flex div -->
@@ -825,5 +871,25 @@
         </div>
     </div>
 </main>
+<!--modal-->
+<div class="my-modal-bg" id="my-modal-bg">
+    <div class="my-modal-case" id="my-modal-case">
+        <div class="my-modal" id="my-modal">
+            <button class="my-modal-btn btn1">신고</button>
+            <button class="my-modal-btn btn2">팔로우 취소</button>
+            <button class="my-modal-btn btn3">게시물로 이동</button>
+            <button class="my-modal-btn btn4">공유 대상...</button>
+            <button class="my-modal-btn btn5">링크 복사</button>
+            <button class="my-modal-btn btn6">퍼가기</button>
+            <button class="my-modal-btn btn7 modal_cancel_btn7" id="modal_cancel_btn7">취소</button>
+        </div>
+    </div>
+</div>
+<script src="../static/js/main-openmodal.js">
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 </html>
