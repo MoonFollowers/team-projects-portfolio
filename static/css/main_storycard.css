@@ -434,5 +434,13 @@
     font-weight: bold;
 }
 
+.carousel-indicators, .carousel-inner, .carousel {
+    height: 767.5px;
+}
+
+.post_main_picture_img {
+    width: 614px;
+    height: auto;
+}
 
 
