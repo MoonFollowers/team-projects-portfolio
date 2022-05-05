@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('instagram_ui.html')
+    return render_template('main.html')
 
 if __name__ == '__main__':
 
