@@ -1,6 +1,6 @@
     // ...버튼 누르면 모달창 켜짐
 const modal = document.getElementById("my-modal-bg");
-const btnModal_1 = document.getElementById("my-modal-active-btn_1");
+const btnModal_1 = document.getElementsByClassName("open-modal");
 // const btnModal_2 = document.getElementById("my-modal-active-btn_2");
 // const btnModal_3 = document.getElementById("my-modal-active-btn_3");
 
