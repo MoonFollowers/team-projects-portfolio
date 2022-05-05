@@ -60,3 +60,16 @@
     border: 0;
     border-top: 1px solid rgba(var(--b6a,219,219,219),1);
 }
+
+.btn1 {
+    color: rgba(237,73,86,1);
+    font-weight: 700;
+    border: 0;
+}
+.btn2 {
+    color: rgba(237,73,86,1);
+    font-weight: 700;
+}
+.no-scroll {
+    overflow: hidden;
+}
