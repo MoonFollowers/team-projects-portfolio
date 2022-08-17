@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <title>ai_chameleon</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../frontend/style.css">
+    <link rel="stylesheet" href="../frontend/responsive.css">
+    <script src="./api.js"></script>
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <div id="preloader">
+    </div>
+    <div class="page1">
+        <nav class="nav">
+            <div class="logo">
+                <!-- <a href="../frontend/main.html"> -->
+                <img width="60px" src="../backend/static/image/base/f4logo.png" onclick="start_music()">
+                <audio id="audioContainer">
+                    <source id="audioSource" type="audio/mp3" src="../frontend/audio/teamf4_citypop2.mp3">
+                </audio>
+                </a>
+            </div>
+            <div class="logout">
+                <a class="navbar-brand logo_h" href="/frontend/main.html">
+                    <button type="button" class="logout_button">HOME</button>
+                </a>
+            </div>
+
+        </nav>
+        <div class="page_top">
+
+            <div class="card1">
+                <div>
+
+                    <div class="word_box">
+                        <h1>Make </h1>
+                        <h1>Beatiful</h1>
+                        <h1>GIFS</h1>
+                        <h1>using AI</h1>
+                        <p>Brignten up your day by making a gif image and listening to a good music.
+                            AI chameleon is available across a range of devices.</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="page_bottom">
+        <div class="card2">
+            <div class="inner_card">
+                <i class="fa fa-images"></i>
+                <!-- <h3>이미지를 드래그해 넣어주세요</h3> -->
+                <form method="post" enctype="multipart/form-data">
+                    <input id="file" type="file" style="display: none;" accept="image/*"
+                        onchange="uploadSelfie(this.File)">
+                    <label for="file" class="upload_button">Drag&Drop or JUST CLICK</label>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+<script>
+    var loader = document.getElementById("preloader");
+    var file = document.getElementById("file")
+    file.addEventListener("change", function () {
+        setTimeout('', 3000);
+        loader.style.display = "flex"; //안보이게 만드는 함수
+    })
+    // var loader = document.getElementById("preloader");
+    // window.addEventListener("load", function () {
+    //     loader.style.display = "none"; //안보이게 만드는 함수
+
+    // })
+
+</script>
+
+</html>

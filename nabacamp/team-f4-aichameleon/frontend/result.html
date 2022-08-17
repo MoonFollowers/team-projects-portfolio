@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <title>카멜레온 결과!</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../frontend/style.css">
+    <link rel="stylesheet" href="../frontend/result.css">
+    <link rel="stylesheet" href="../frontend/responsive.css">
+    <script src="../frontend/api.js"></script>
+    <script src="../frontend/result.js"></script>
+</head>
+
+<body>
+    <div class="page2">
+        <nav class="nav">
+            <a href="../frontend/main.html">
+                <img width="60px" src="../backend/static/image/base/f4logo.png" onclick="start_music()">
+                <!-- <audio id="audioContainer">
+                    <source id="audioSource" src="../frontend/audio/Angry.mp3">
+                </audio> -->
+            </a>
+            <div class="logout">
+                <a class="navbar-brand logo_h" href="/frontend/main.html">
+                    <button type="button" class="logout_button">HOME</button>
+                </a>
+            </div>
+        </nav>
+        <div class="card_set">
+            <div class="card3">
+                <div id="inner_card" class="inner_card">
+
+                </div>
+            </div>
+            <div class="card4">
+                <div class="crd4_top">
+                    <div class="crd4_bottom">
+                        <a id="musicSelect"><button type="button" class="download_button"
+                                onclick="select_music()">Select Music
+                            </button></a>
+                        <a id="musicStart"><button type="button" class="download_button" onclick="start_music()">Turn
+                                On</button></a>
+                        <a id="download" href="" download><button type="button" class="download_button">다운로드</button>
+                    </div>
+                    <audio id="audioContainer" controls style="display: none;" type="audio/mp3">
+                        <source id="audioSource" src="../frontend/audio/Angry.mp3">
+                    </audio>
+                    <!-- <p>여기다 뭘 할지 아직 솔직히 잘 모르겟습니다. 그래도 뭐든 하지 않을까요?
+                        그런것들을 위한 공간입니다.여기다 뭘 할지 아직 솔직히 잘 모르겟습니다. 그래도 뭐든 하지 않을까요?
+                        그런것들을 위한 공간입니다.여기다 뭘 할지 아직 솔직히 잘 모르겟습니다. 그래도 뭐든 하지 않을까요?
+                        그런것들을 위한 공간입니다.여기다 뭘 할지 아직 솔직히 잘 모르겟습니다. 그래도 뭐든 하지 않을까요?
+                        그런것들을 위한 공간입니다.</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
