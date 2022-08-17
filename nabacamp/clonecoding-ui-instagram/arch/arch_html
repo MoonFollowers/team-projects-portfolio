@@ -1,0 +1,241 @@
+* 뼈대 구조 역기획
+*
+*   1. 헤더 header
+*       - 헤더 전체로 묶어 가독성 올리기
+*
+*       2. 헤더 내부 묶음 div
+*           - 헤더에서 내부 전체를 묶는 용도
+*
+*           3. 내비게이션 바 nav
+*               - nav 태그를 적어서 가독성을 올려주기
+*
+*               4. 내비게이션 바 div
+*                   - 내비게이션 바의 크기, 안쪽/바깥 여백
+*
+*                   4.1. 내비게이션 바 랩 flex div
+*                       - 내비게이션 바 하위 태그의 아이템을 가운데로 정렬
+*
+*
+*   5. 헤더 홈버튼 div
+*
+*       5.1. 페이지를 이동할 주소가 들어간 a 태그
+*
+*           5.2. 아이콘과 검색까지의 간격을 나누는 flex div
+*
+*               5.3. 아이콘 이미지를 넣는 div
+*
+*   5. 헤더 검색 div
+*
+*       5.1. 검색 아이콘, 글자 padding div
+*
+*           5.2. 검색 input tag
+*
+*           5.2. 가짜 검색 input tag
+*
+*               5.3. 가짜검색 인풋 flex div
+*
+*                   5.4. 검색 아이콘 i
+*
+*                   5.4. 검색 가짜 플레이스홀더 span
+*
+*           5.2. 검색 이후 내용 지우기 아이콘 div
+*
+*           5.2. 최근 검색항목 div
+*
+*               5.3. 최근 검색항목 뼈대 div
+*
+*   5. 헤더 아이콘즈 div
+*
+*       5.1. 아이콘 flex div
+*
+*           5.2. home 아이콘 div
+*
+*               5.3. home 아이콘 i
+*
+*           5.2. explore 아이콘 div
+*
+*               5.3. explore 아이콘 i
+*
+*           5.2. plus 아이콘 div
+*
+*               5.3. plus 아이콘 i
+*
+*           5.2. heart 아이콘 div
+*
+*               5.3. heart 아이콘 i
+*
+*           5.2. profile 아이콘 div
+*
+*               5.3. profile 아이콘 i
+*
+************************************************************************************************************************
+*
+*   1. 메인 body
+*
+*   2. 스토리필드 field_story
+*
+*       3. 프레젠테이션 div   wrap_presentation
+*
+*           4. 프레젠테이션 flex div      presentation_flex
+*
+*               5. 프레젠테이션 여백 div    presentation_margin
+*
+*               5. 프레젠테이션 프로필 묶음 div   presentation_list
+*
+*                   6. 프레젠테이션 프로필 div   presentation_profile
+*
+*                       7. 프로필 이미지 묶음 div   presentation_profile_image
+*
+*                           8. 프로필 이미지 테두리 div      presentation_profile_border
+*
+*                           8. 프로필 이미지 div       presentation_image_canvas
+*
+*                       7. 프로필 이름 a     presentation_profile_name
+*
+*       3. 스토리카드 div    wrap_storycards
+*
+*           4. 스토리카드 상단 div   storycards_top
+*
+*               5. 스토리카드 상단 flex div    storycards_top_flex
+*
+*                   6. 스토리카드 상단 프로필 div    storycards_top_profile
+*
+*                       7. 스토리카드 프로필 이미지 div    stroycards_top_profile_image
+*
+*                       7. 스토리카드 프로필 이름 div     storycards_top_profile_name
+*
+*                           8. 스토리카드 프로필 닉네임 div    storycards_top_profile_name_nickname
+*
+*                           8. 스토리카드 프로필 위치 div     storycards_top_profile_name_location
+*
+*                   6. 스토리카드 상단 옵션 div     storycards_top_option
+*
+*           4. 스토리카드 중단 div     storycards_middle
+*
+*               5. 스토리카드 중단 캐러셀 div     storycards_middle_carousel
+*
+*                   6. 스토리카드 캐러셀 이미지 div storycards_middle_carousel_image
+*
+*                       7. 스토리카드 중단 이미지 넘기기 아이콘 div     storycards_middle_next
+*
+*                           8. 스토리카드 중단 이미지 넘기기 아이콘 i   btn_next
+*
+*                       7. 스토리카드 중단 이미지 돌리기 아이콘 div     storycards_middle_prev
+*
+*                           8. 스토리카드 중단 이미지 돌리기 아이콘 i   btn_prev
+*
+*                       7. 스토리카드 중단 태그 유저 아이콘 div       storycards_middle_taguser
+*
+*                           8. 스토리카드 중단 태그 아이콘 i        s12
+*
+*                       7. 스토리카드 중단 음소거 아이콘 div     storycards_middle_muteicon
+*
+*                           8. 스토리카드 중단 음소거 아이콘 i       s12
+*
+*           4. 스토리카드 하단 div     storycards_bottom
+*
+*               5. 스토리카드 하단 아이콘즈 div        storycards_bottom_icons
+*
+*                   6. 스토리카드 아이콘즈 flex div      storycards_bottom_icons_flex
+*
+*                       7. 스토리카드 레프트 아이콘 div        storycards_bottom_icons_left
+*
+*                           8. 스토리카드 레프트 아이콘 하트 div     storycards_bottom_icons_left_heart
+*
+*                           8. 스토리카드 레프트 아이콘 코멘트 div    storycards_bottom_icons_left_comment
+*
+*                           8. 스토리카드 레프트 아이콘 익스플로어 div      storycards_bottom_icons_left_explore
+*
+*                       7. 스토리카드 미들 아이콘 div         storycards_bottom_icons_middle
+*
+*                           8. 스토리카드 미들 아이콘 스테이터스 div   storycards_bottom_icons_middle_status
+*
+*                       7. 스토리카드 라이트 아이콘 div        storycards_bottom_icons_right
+*
+*                           8. 스토리카드 라이트 아이콘 북마크 div        storycards_bottom_icons_right_bookmark
+*
+*               5. 스토리카드 하단 좋아요 div     storycards_bottom_likes
+*
+*                   6. 좋아요 아이콘  div     storycards_bottom_likes_icons
+*
+*                   6. 스토리카드 하단 좋아요 스팬      storycards_bottom_likes_span
+*
+*               5. 스토리카드 하단 스토리 div     storycards_bottom_story
+*
+*                   6. 스토리카드 하단 내용 부문 div       storycards_bottom_story_detail
+*
+*                       7. 스토리카드 하단 스토리 아이디 div     storycards_bottom_story_user
+*
+*                       7. 스토리카드 하단 스토리 내용 div      storycards_bottom_story_data
+*
+*                       7. 스토리카드 하단 스토리 더보기 버튼 div      storycards_bottom_story_morebtn
+*
+*                   6. 스토리카드 하단 스토리 댓글보기 div    storycards_bottom_story_viewcomment
+*
+*                   6. 스토리카드 하단 스토리 작성일자 div    storycards_bottom_story_post
+*
+*               5. 스토리카드 하단 댓글 div      storycards_bottom_comment
+*
+*                   6. 스토리카드 하단 댓글 flex div     storycards_bottom_comment_flex
+*
+*                       7. 스토리카드 하단 댓글 이모지 추가 div       storycards_bottom_comment_emoji
+*
+*                       7. 스토리카드 하단 댓글 인풋 div           storycards_bottom_comment_input
+*
+*                       7. 스토리카드 하단 댓글 게시버튼 div     storycards_bottom_comment_postbtn
+*
+*   2. 푸터필드 field_footer
+*
+*       3. 푸터 flex div  footer_flex
+*
+*           4. 푸터 프로필 div       footer_profile
+*
+*               5. 푸터 프로필 flex div  fotter_profile_flex
+*
+*                   6. 푸터 프로필 이미지 div       footer_profile_image
+*
+*                   6. 푸터 프로필 유저 div    footer_profile_user
+*
+*                       7. 푸터 프로필 유저 닉네임    footer_profile_user_nickname
+*
+*                       7. 푸터 프로필 유저 이름     footer_profile_user_name
+*
+*                   6. 푸터 프로필 전환 div        footer_profile_user_change
+*
+*           4. 푸터 추천 div        footer_recommend
+*
+*               5. 푸터 추천 상단부    footer_recommend_top
+*
+*                   6. 푸터 추천 소개     footer_recommend_top_intro
+*
+*                   6. 푸터 추천 보기     footer_recommend_top_view
+*
+*               5. 푸터 추천 중단부    footer_recommend_middle
+*
+*                   6. 푸터 추천 플렉스 div    footer_recommend_middle_flex
+*
+*                       7. 푸터 추천 리스트 묶음 div     footer_recommend_middle_list
+*
+*                           8. 푸터 추천 리스트 이미지 div       footer_recommend_middle_list_image
+*
+*                           8. 푸터 추천 리스트 유저 div     footer_recommend_middle_list_user
+*
+*                               9. 푸터 추천 리스트 유저 닉네임     footer_recommend_middle_list_user_nickname
+*
+*                               9. 푸터 추천 리스트 유저 추천이유        footer_recommend_middle_list_user_reason
+*
+*                           8. 푸터 추천 리스트 팔로우 div        footer_recommend_middle_list_follow
+*
+*           4. 푸터 정보 div        footer_info
+*
+*               5. 푸터 정보 내비게이션 div          footer_info_nav
+*
+*                   6. 푸터 내비게이션 리스트         footer_info_list
+*
+*               5. 푸터 정보 회사이름 div           footer_info_corp
+
+
+
+
+
+
