@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>팀 올드보이</title>
+    <!--  JQuery Import  -->
+    <!--  src 부분을 https 로 변경해주면 로딩이 없어지는 상황이 있었음  -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <!--  favicon img  -->
+    <!--  파비콘: 브라우저에서 탭에 붙는 아이콘  -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../static/image/favicon-96x96.png">
+
+    <!--  web font link  -->
+    <!--  도트형 폰트  -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/Dalgona/neodgm-webfont@1.510/neodgm/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/Dalgona/neodgm-webfont@1.510/neodgm_code/style.css">
+
+    <!--  CSS 파일 링크  -->
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+<!--  모달 전체  -->
+<div class="modal">
+    <div class="modal-container">
+        <div class="modal-header">
+            <!--  status 창 이미지 태그  -->
+            <img src="" class="team-image" id="status-image">
+            <div class="name-strong-point">
+                <!--  id 값을 지정해서 text값 변경 기능 추가 가능 >> 코드를 일일이 치기 보다는 만들어 놓은 부분 재사용 가능  -->
+                <p class="name" id="status-name"></p>
+                <!--  닉네임 아이디 지정  -->
+                <p class="nickname" id="status-nickname"></p>
+            </div>
+            <div class="x-button">x</div>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body-row1">
+                <!--  level은 0으로 지정 우리는 다 초보니까 ^^-->
+                <div class="blue-status-category">
+                    lv : <span class="status-content">0</span>
+                </div>
+                <!--  mbti id 지정-->
+                <div class="blue-status-category" id="status-mbti">
+                    mbti : <span class="status-content"></span>
+                </div>
+            </div>
+            <div class="modal-body-row2">
+                <div class="blue-status-category">
+                    <!--  장점 아이디 생성  -->
+                    장점 : <span class="status-content" id="strong-point"></span>
+                </div>
+                <div class="blue-status-category">
+                    <!--  협업 스타일 아이디 생성  -->
+                    협업 스타일 : <span class="status-content" id="teaming-method"></span>
+                </div>
+            </div>
+            <div class="modal-body-row2">
+                <!--  tmi를 옮긴 대사 아이디 생성  -->
+                <div class="status-content" id="tmi-to-line">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  제목 박스  -->
+<div class="text_box">
+    <div class="old_Boy">
+        old boy
+    </div>
+</div>
+
+<!--  뮤직스타트 버튼 구역  -->
+<div class="wrap_btn_box">
+    <div class="wrap_btn">
+        <!--  오디오 소스 컨테이너: 소스를 넣기 위한 태그  -->
+        <audio id="audioContainer">
+            <!--  오디오 소스 태그: 오디오 파일 넣는 자리  -->
+            <source id="audioSource" src="../static/audio/opening.mp3">
+        </audio>
+    </div>
+    <!--  버튼을 누르면 등장하는 텍스트  -->
+    <div class="t_loading">잠시후!!</br> 팀 페이지로 이동합니다!</div>
+    <!--  애니메이팅과 음악을 담당하는 버튼  -->
+    <div onclick="music(); goToScroll_start();" class="game-start">music start</div>
+</div>
+
+<!--  화면 하단부 캐릭터 아이콘 이미지 구역 -->
+<div class="fixed">
+    <div id="char" class="flex">
+        <!--  스크롤 기능을 수행할 온클릭 함수와 인자 값 넣기  -->
+        <img onclick="goToScroll('lee')" class="charimg" src="../static/image/character/iori.png">
+        <img onclick="goToScroll('hwang')" class="charimg" src="../static/image/character/phantom.png">
+        <img onclick="goToScroll('joo')" class="charimg" src="../static/image/character/snobro.png">
+        <img onclick="goToScroll('kim')" class="charimg" src="../static/image/character/mario.png">
+    </div>
+</div>
+
+<!---->
+<div class="stage flex">
+    <div class="icon-button-iori"></div>
+    <div class="icon-button-phantom"></div>
+    <div class="icon-button-snow-bro"></div>
+    <div class="icon-button-mario"></div>
+</div>
+
+<!--  팀 소개 구역  -->
+<div id="wrap_teamIntro">
+    <!--  사진과 글자를 한데 묶은 div  -->
+    <div class="content_team">
+        <div class="img_team img_team_intro"></div>
+        <div class="title_team">
+            <!--  부제 부문  -->
+            <h2>팀 올드보이 소개</h2>
+            <!--  내용 부문  -->
+            <div class="intro_font">
+                <p><img src="../static/image/character/phantom.png" , width=30px;, height=30px;> 벌써 여기까지 왔군! 사천왕 올드보이를
+                    소개하마..!</p>
+                <p><img src="../static/image/character/mario.png" , width=30px;, height=30px;> 우리는 찐한 아재미를 물씬 풍기는 중후한
+                    매력의 팀이야 >.<
+                </p>
+                <p><img src="../static/image/character/snobro.png" , width=30px;, height=30px;> (비밀인데..)홈 쿠킹이 우리의 공통점이다
+                    !.!</p>
+                <p><img src="../static/image/character/iori.png" , width=30px;, height=30px;> 비록 올드보이지만 젊은 체력 못지않게 좋은
+                    성과를 거둔다고!
+                </p>
+                <p><img src="../static/image/character/phantom.png" , width=30px;, height=30px;> Next Stage 에 진입 하려면 우리에
+                    대해 잘 알아둬야
+                    할거야! </p>
+            </div>
+        </div>
+    </div>
+    <p class="typing"></p>
+
+    <!--  화면 스크롤 버튼 아이콘  -->
+    <div class="icons">
+        <!--  팀 소개 이동 아이콘  -->
+        <div class="sd_joo" onclick="goToScroll('wrap_teamIntro')"></div>
+        <!--  팀 목표 이동 아이콘  -->
+        <div class="sd_lee" onclick="goToScroll('wrap_teamGoal')"></div>
+        <!--  팀 약속 이동 아이콘  -->
+        <div class="sd_kim" onclick="goToScroll('wrap_teamRule')"></div>
+        <!--  화면 최상단 이동 아이콘  -->
+        <div class="sd_hwang" onclick="goToScroll_top()"></div>
+    </div>
+</div>
+
+<!--  팀 목표 구역  -->
+<div id="wrap_teamGoal">
+    <!--  사진과 글자를 한데 묶은 div  -->
+    <div class="content_team">
+        <div class="img_team img_team_goal">
+        </div>
+        <div class="title_team">
+            <!--  부제 부문  -->
+            <h2>팀 올드보이 목표</h2>
+            <!--  내용 부문  -->
+            <div class="intro_font">
+                <p><img src="../static/image/character/phantom.png" , width=30px;, height=30px;> 벌써 여기까지 왔군! 이번엔 우리의 야망을
+                    알려주지...
+                </p>
+                <p><img src="../static/image/character/mario.png" , width=30px;, height=30px;> 우리의 목표가 궁금해? 난 별로 알려주고 싶지
+                    않은데 >.<
+                </p>
+                <p><img src="../static/image/character/snobro.png" , width=30px;, height=30px;> 흠, 좋다. IORI 네가 말해봐라 !.!
+                </p>
+                <p><img src="../static/image/character/iori.png" , width=30px;, height=30px;> 우리는 수료까지 제작부터 운영,관리 할 수 있는
+                    백엔드
+                    프로그래머의 힘을 기르는 것을 목표로 한다!</p>
+                <p><img src="../static/image/character/phantom.png" , width=30px;, height=30px;> 이것을 궁극적인 목표를 삼고 취업 까지
+                    달려가고 있지!
+                    +_+ </p>
+            </div>
+        </div>
+    </div>
+    <!--  화면 스크롤 버튼 아이콘  -->
+    <div class="icons">
+        <!--  팀 소개 이동 아이콘  -->
+        <div class="sd_joo" onclick="goToScroll('wrap_teamIntro')"></div>
+        <!--  팀 목표 이동 아이콘  -->
+        <div class="sd_lee" onclick="goToScroll('wrap_teamGoal')"></div>
+        <!--  팀 약속 이동 아이콘  -->
+        <div class="sd_kim" onclick="goToScroll('wrap_teamRule')"></div>
+        <!--  화면 최상단 이동 아이콘  -->
+        <div class="sd_hwang" onclick="goToScroll_top()"></div>
+    </div>
+</div>
+
+<!--  팀 약속 구역  -->
+<div id="wrap_teamRule">
+    <!--  사진과 글자를 한데 묶은 div  -->
+    <div class="content_team">
+        <div class="img_team img_team_rule">
+        </div>
+        <div class="title_team">
+            <!--  부제 부문  -->
+            <h2>팀 올드보이 약속</h2>
+            <!--  내용 부문  -->
+            <div class="intro_font">
+                <p><img src="../static/image/character/phantom.png" , width=30px;, height=30px;> 벌써 마지막 까지 오다니.. 대단한걸?
+                </p>
+                <p><img src="../static/image/character/mario.png" , width=30px;, height=30px;> 어쩔수 없지 우리의 약속을 알려주겠다! >.<
+                </p>
+                <p><img src="../static/image/character/snobro.png" , width=30px;, height=30px;> 12시간을 기본으로! 그 이상이라도 시간에
+                    구애 받지 않지
+                    !.! </p>
+                <p><img src="../static/image/character/iori.png" , width=30px;, height=30px;> 개인행동은 자제하고, 팀을 위해 최선을
+                    다한다.!</p>
+                <p><img src="../static/image/character/phantom.png" , width=30px;, height=30px;>개인 일정은 반드시 사전공지! 팀원을 배려
+                    할 수 있는 언행을
+                    기억하자!</p>
+            </div>
+        </div>
+    </div>
+    <!--  화면 스크롤 버튼 아이콘  -->
+    <div class="icons">
+        <!--  팀 소개 이동 아이콘  -->
+        <div class="sd_joo" onclick="goToScroll('wrap_teamIntro')"></div>
+        <!--  팀 목표 이동 아이콘  -->
+        <div class="sd_lee" onclick="goToScroll('wrap_teamGoal')"></div>
+        <!--  팀 약속 이동 아이콘  -->
+        <div class="sd_kim" onclick="goToScroll('wrap_teamRule')"></div>
+        <!--  화면 최상단 이동 아이콘  -->
+        <div class="sd_hwang" onclick="goToScroll_top()"></div>
+    </div>
+</div>
+
+<!--  화면을 이동하기 위한 id 값이 들어있는 a 태그  -->
+<a id="joo"></a>
+<!--  멤버카드 구역  -->
+<div class="wrap_Member">
+    <!--  부제 부문  -->
+    <div class="title_member">캐릭터 선택</div>
+    <!--  이름 부문  -->
+    <div class="name_member text1">주정한, 자유로운 여행자</div>
+    <div class="content_member">
+        <!-- 사진 부문: 300x400 -->
+        <div class="card_box">
+            <!--  사진 앞면  -->
+            <div class="item front"><img class="sizing" src="https://url.kr/i5mnor"></div>
+            <!--  사진 뒷면  -->
+            <div class="item back"><img src="../static/image/source/entp.png"></div>
+        </div>
+        <!--  멤버 간단 소개  -->
+        <div class="desc_member">
+            <p>ENTP</p>
+            <p>여행자</p>
+            <p>홈쿠커</p>
+            <!--  모달 열기 버튼  -->
+            <p><a class="open-modal 3 text_shadow">스테이터스 확인</a></p>
+        </div>
+    </div>
+    <!--  hp바 이미지  -->
+    <div class="hp_bar"></div>
+    <!--  mp바 이미지  -->
+    <div class="mp_bar"></div>
+    <div class="icon_member">
+        <!--  블로그 이동 버튼 부문  -->
+        <div class="icon_member_textbox">블로그GoGo~</div>
+        <a href="https:velog.io/@aboutjoo" target='_blank'><img class="blog_link"
+                                                                src="../static/image/character/snobro.png"> </a>
+    </div>
+</div>
+
+<!--  화면을 이동하기 위한 id 값이 들어있는 a 태그  -->
+<a id="lee"></a>
+<!--  멤버카드 구역  -->
+<div class="wrap_Member">
+    <!--  부제 부문  -->
+    <div class="title_member">캐릭터 선택</div>
+    <!--  이름 부문  -->
+    <div class="name_member text2">이민기, 프린세스 메이커</div>
+    <div class="content_member">
+        <!--  사진 부문: 300x400  -->
+        <div class="card_box">
+            <!--  사진 앞면  -->
+            <div class="item front"><img class="sizing" src="https://url.kr/u2139d"></div>
+            <!--  사진 뒷면  -->
+            <div class="item back"><img src="../static/image/source/enfp.png"></div>
+        </div>
+        <!--  멤버 간단 소개  -->
+        <div class="desc_member">
+            <p>ENFP</p>
+            <p>세 딸의 아버지</p>
+            <p>대기업 유튜버</p>
+            <!--  모달 열기 버튼  -->
+            <p><a class="open-modal 1 text_shadow">스테이터스 확인</a></p>
+        </div>
+    </div>
+    <!--  hp바 이미지  -->
+    <div class="hp_bar"></div>
+    <!--  mp바 이미지  -->
+    <div class="mp_bar"></div>
+    <div class="icon_member">
+        <!--  블로그 이동 버튼 부문  -->
+        <div class="icon_member_textbox">블로그GoGo~</div>
+        <a href="https://velog.io/@psjlmk" target='_blank'><img class="blog_link"
+                                                                src="../static/image/character/iori.png">
+        </a>
+
+    </div>
+</div>
+
+<!--  화면을 이동하기 위한 id 값이 들어있는 a 태그  -->
+<a id="kim"></a>
+<!--  멤버카드 구역  -->
+<div class="wrap_Member">
+    <!--  부제 부문  -->
+    <div class="title_member">캐릭터 선택</div>
+    <!--  이름 부문  -->
+    <div class="name_member text3">김하진, 취미부자 수집가</div>
+    <div class="content_member">
+        <!--  사진 부문: 300x400  -->
+        <div class="card_box">
+            <!--  사진 앞면  -->
+            <div class="item front"><img class="sizing" src="https://url.kr/cja8yx"></div>
+            <!--  사진 뒷면  -->
+            <div class="item back"><img src="../static/image/source/enfp.png"></div>
+        </div>
+        <!--  멤버 간단 소개  -->
+        <div class="desc_member">
+            <p>ENFP</p>
+            <p>별이 집사님</p>
+            <p>요식업 경력자</p>
+            <!--  모달 열기 버튼  -->
+            <p><a class="open-modal 2 text_shadow">스테이터스 확인</a></p>
+        </div>
+    </div>
+    <!--  hp바 이미지  -->
+    <div class="hp_bar"></div>
+    <!--  mp바 이미지  -->
+    <div class="mp_bar"></div>
+    <div class="icon_member">
+        <!--  블로그 이동 버튼 부문  -->
+        <div class="icon_member_textbox">블로그GoGo~</div>
+        <a href="http://velog.io/@gkwlsdl1" target='_blank'><img class="blog_link"
+                                                                 src="../static/image/character/mario.png">
+        </a>
+    </div>
+</div>
+
+<!--  화면을 이동하기 위한 id 값이 들어있는 a 태그  -->
+<a id="hwang"></a>
+<!--  멤버카드 구역  -->
+<div class="wrap_Member">
+    <!--  부제 부문  -->
+    <div class="title_member">캐릭터 선택</div>
+    <!--  이름 부문  -->
+    <div class="name_member text">황영상, 하루종일 몽상가</div>
+    <div class="content_member">
+        <!--  사진 이미지: 300x400  -->
+        <div class="card_box">
+            <!--  사진 앞면  -->
+            <div class="item front"><img class="sizing"
+                                         src="https://teamsparta.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa8d9002c-b736-4908-832b-4ed8fad4c4a4%2FKakaoTalk_Photo_2022-04-12-12-29-09.jpeg?table=block&id=7d24aa4f-61d2-431c-abc6-9200acae0b91&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=&cache=v2">
+            </div>
+            <!--  사진 뒷면  -->
+            <div class="item back"><img src="../static/image/source/infp.png"></div>
+        </div>
+        <!--  멤버 간단 소개  -->
+        <div class="desc_member">
+            <p>INFP</p>
+            <p>공상쟁이</p>
+            <p>극복이, 뚜이 아빠</p>
+            <!--  모달 열기 버튼  -->
+            <p class="open-modal 0 text_shadow">스테이터스 확인</p>
+        </div>
+    </div>
+    <!--  hp바 이미지  -->
+    <div class="hp_bar"></div>
+    <!--  mp바 이미지  -->
+    <div class="mp_bar"></div>
+    <div class="icon_member">
+        <!--  블로그 이동 버튼 부문  -->
+        <div class="icon_member_textbox">블로그GoGo~</div>
+        <a href="http://velog.io/@migdracios" target='_blank'><img class="blog_link"
+                                                                   src="../static/image/character/phantom.png">
+        </a>
+    </div>
+</div>
+</div>
+
+<!--  자바스크립트 링크  -->
+<script src="../static/js/index.js"></script>
+
+</body>
