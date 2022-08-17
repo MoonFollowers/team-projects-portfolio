@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+/*@import "reset.css";*/
+@import "variables.css";
+/* Components */
+@import "nav-bar.css";
+@import "list-card.css";
+/* Screens */
+@import "list.css";
+@import "login.css";
+@import "signup.css";
+@import "mypage.css";
+@import "mylike.css";
+@import "myreview.css";
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--default);
+  background-color: #eeeeee;
+}
+
+@media screen and (min-width: 500px) and (max-width: 1080px) {
+  .naviBar,
+  .login-main,
+  .signup-main {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login-main,
+  .signup-main,
+  .naviBar {
+    width: 500px;
+  }
+}
+
+/*네비게이션 css입니다*/
+.naviBar {
+    background-color: #FF6219;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 100;
+}
+
+.naviBar ul li {
+    list-style: none;
+    color: #3A3845;
+    background-color: #FF6219;
+    float: left;
+    line-height: 70px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.naviBar .logoIcon {
+    height: 65px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+.naviBar .logoIcon:hover {
+  transform: rotateY(180deg) scale(1.2);
+}
+
+.menuLink {
+    text-decoration: none;
+    color: #3A3845;
+    display: block;
+    width: 180px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.menuLink:hover {
+    transition: 0.5s;
+    font-size: 19px;
+    text-decoration: none;
+    color: #3A3845;
+    background: #FFF3ED;
+}
+
+.myPageLink {
+    position: absolute;
+    right: 19%;
+}
+
+.loginIcon {
+    height: 38px;
+
+}
+
+.loginIcon:hover {
+    transition: 0.5s;
+    transform: scale(1.08)
+}

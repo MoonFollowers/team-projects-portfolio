@@ -1,0 +1,425 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.naviBar {
+    background-color: #FF6219;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 100;
+}
+
+.naviBar ul li {
+    list-style: none;
+    color: #3A3845;
+    background-color: #FF6219;
+    float: left;
+    line-height: 70px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.naviBar .logoIcon {
+    height: 65px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+.naviBar .logoIcon:hover {
+  transform: rotateY(180deg) scale(1.2);
+}
+
+.menuLink {
+    text-decoration: none;
+    color: #3A3845;
+    display: block;
+    width: 180px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.menuLink:hover {
+    transition: 0.5s;
+    font-size: 19px;
+    text-decoration: none;
+    color: #3A3845;
+    background: #FFF3ED;
+}
+
+.myPageLink {
+    position: absolute;
+    right: 19%;
+}
+
+.loginIcon {
+    height: 38px;
+
+}
+
+.loginIcon:hover {
+    transition: 0.5s;
+    transform: scale(1.08)
+}
+
+.wrap {
+    width: 1080px;
+    height: auto;
+    margin: 0px auto 0 auto;
+    padding: 40px 20px 40px 20px;
+    position: relative;
+}
+
+.rankTitleWrap {
+    text-align: center;
+    position: relative;
+    left: -25px;
+    top: 50px;
+}
+
+.rankTitle {
+    font-size: 45px;
+    padding: 20px 20px 5px 30px;
+    letter-spacing: -4px;
+    color: #3A3845;
+    font-weight: 750;
+    border-radius: 30px 30px 30px 0;
+    border-bottom: #3A3845 solid 3px;
+    background-color: white;
+
+}
+
+.starIcon {
+    position: relative;
+    left: 47px;
+    top: -13px;
+    height: 55px;
+}
+
+.rankTitleTop10 {
+    font-size: 70px;
+    letter-spacing: -10px;
+}
+
+.contentWrap {
+    padding-top: 70px;
+}
+
+.sortBar {
+    width: 927px;
+    text-align: right;
+    margin: 80px 0 10px 0;
+    height: 25pt;
+    position: relative;
+}
+
+.text {
+    display: inline-block;
+    text-align: left;
+    position: absolute;
+    width: 500px;
+    left: 175px;
+    top: 16px;
+    letter-spacing: -0.7px;
+    font-size: 14px;
+    color: grey;
+    font-weight: 400;
+}
+/*이 부분 논의 필요*/
+/*오른쪽 정렬을 위한 속성인 float:right를 사용하고 싶었으나*/
+/*이를 적용하면 wrap 바깥으로 벗어나는 현상이 자꾸 발생함*/
+
+.sortBar ul li {
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sortTab {
+    text-decoration: none;
+    color: #3A3845;
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 0 0 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    border-radius: 10px 10px 10px 0;
+    background-color: white;
+    box-shadow: 0 0 0.5px 0.5px #E1E1E1;
+}
+
+.sortTab:hover {
+    color: #3A3845;
+    font-weight: bolder;
+    transition: 0.3s;
+    font-size: 21px;
+    text-decoration: none;
+}
+
+.sortBar ul li.current {
+    color: white;
+    font-weight: 550;
+    transition: 0.3s;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px 10px 10px 0;
+    background-color: #3A3845;
+    box-shadow: 0 0 0.5px 0.5px #E1E1E1;
+}
+
+.listWrap {
+    display: none;
+    width: 880px;
+    margin: auto;
+    position: relative;
+}
+
+.listWrap.current {
+    display: inherit;
+}
+
+.recipeWrap {
+    border: solid 3.5pt #FF6219;
+    border-radius: 15pt;
+    padding: 5px 20px 15px 20px;
+    margin: 5px 20px 25px 20px;
+    position: relative;
+    background-color: white;
+}
+
+.nameWrap {
+    display: inline-block;
+    float: right;
+    padding-top: 42px;
+    position: relative;
+}
+
+.arrow_box {
+    visibility: hidden;
+    position: absolute;
+    width: 110px;
+    font-size: 13px;
+    padding: 5px;
+    left: -26px;
+    top: 87px;
+    border-radius: 10px;
+    background-color: rgba(9,9,9,0.8);
+    color: #fff;
+    z-index: 100;
+    text-align: center;
+}
+
+.arrow_box::after {
+  position: absolute;
+  bottom: 100%;
+  left: 40%;
+  width: 0;
+  height: 0;
+  margin-left: -8px;
+  border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent rgba(9,9,9,0.8) transparent;
+  pointer-events: none;
+  content: ' ';
+}
+
+.recipe_add:hover p.arrow_box {
+    visibility: visible;
+}
+
+.medalIcon {
+    width: 150px;
+    position: absolute;
+    left: -40px;
+    top: -27pt;
+}
+
+.recipeImgWrap {
+    width: 400px;
+    height: 300px;
+    line-height : 300px;
+    text-align: center;
+    display: inline-block;
+}
+
+.recipe_img {
+    width: 380px;
+    height: 280px;
+    border-radius: 10pt;
+    vertical-align: middle;
+    background-size: contain;
+}
+
+.recipeDescWrap {
+    display: inline-block;
+    position: absolute;
+    padding: 40pt 0 0 0;
+    right: 10px;
+    top: 15px;
+    color: #3A3845;
+    text-align: center;
+    width: 400px;
+}
+
+.recipeDesc2Wrap {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 130px;
+    color: #3A3845;
+    text-align: center;
+    width: 400px;
+}
+
+.recipe_link, .recipe_link:hover {
+    text-decoration: none;
+}
+
+.recipe_name {
+    font-size: 43px;
+    font-weight: 600;
+    color: #3A3845;
+    display: inline-block;
+    width: 400px;
+    position: relative;
+    line-height: 30px;
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+
+.recipe_name:hover {
+    transition: 0.3s;
+    font-weight: bolder;
+    font-size: 44px;
+}
+
+.recipeTimeWrap {
+    margin: 35px 0 0 0;
+    text-align: center;
+}
+
+.timeIcon {
+    width: 32px;
+}
+
+.recipe_time {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #3A3845;
+    position: relative;
+    top: 3px;
+}
+
+.recipeDiffWrap {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.diffIcon {
+    width: 38px;
+}
+
+.recipe_diff {
+    padding-left: 3px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #3A3845;
+    position: relative;
+    top: 3px;
+}
+.recipeWrapss {
+    border: solid 3.5pt #FF6219;
+    border-radius: 15pt;
+    padding: 10px 20px 0 20px;
+    margin: 5px 20px 25px 20px;
+    position: relative;
+    background-color: white;
+}
+
+.recipeWraps {
+    position: relative;
+    padding-top: 3px;
+    padding-bottom: 15px;
+
+}
+
+.recipeRank {
+    font-size: 70px;
+    font-weight: bolder;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    color: #3A3845;
+    letter-spacing: -12px;
+    line-height: 77px;
+}
+
+.recipeNameWrap {
+    line-height: 77px;
+    position: relative;
+    left: 80px;
+}
+
+.recipeDescWraps {
+    display: inline-block;
+    position: absolute;
+    width: 280px;
+    text-align: center;
+    top: -7px;
+}
+
+.recipe_name2 {
+    font-size: 38px;
+    font-weight: 600;
+    color: #3A3845;
+    display: inline-block;
+    width: 390px;
+    position: relative;
+    line-height: 40px;
+    vertical-align: center;
+    letter-spacing: -1px;
+}
+
+.recipe_name2:hover {
+    transition: 0.3s;
+    font-weight: bolder;
+    font-size: 39px;
+}
+
+.recipe_time2 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3A3845;
+    line-height: 70px;
+    padding-right: 35px;
+    padding-left: 5px;
+}
+
+.recipe_diff2 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3A3845;
+    line-height: 70px;
+}
+
+.diffIcon2, .timeIcon2{
+    position: relative;
+    top: -3px;
+}
+
+
+
+
+
+
+
