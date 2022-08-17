@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'IBMPlex-Bold';
+    src: url('../font/IBMPlexMono-Bold.otf');
+}
+
+@font-face {
+    font-family: 'IBMPlex-Regular';
+    src: url('../font/IBMPlexMono-Regular.otf');
+}
+
+@font-face {
+    font-family: 'IBMPlex-Thin';
+    src: url('../font/IBMPlexMono-Thin.otf');
+}
+
+body {
+    font-family: 'IBMPlex-Thin';
+}
+ 
+main {
+    height : 100vh;
+}
+
+.mainname{
+    font-family: 'IBMPlex-Bold';
+    margin-top: 25px;
+    font-size: 100px;
+}
+
+.small_main {
+    width : 35vw;
+
+    display: flex;
+    flex-direction: column;
+    position : fixed;
+}
+
+.big_main {
+    width : 65vw;
+    margin-left: 35vw;
+    height: 100%;
+    /* border: 1px solid black; */
+    /* background-color: whitesmoke; */
+}
+
+.main_post {
+    padding: 80px 20px 20px 60px;
+    /* font-family: 'IBMPlex-Bold'; */
+    border: black 2px solid;
+    background-color:#f8fafc;
+}
+
+
+header {
+    background-color: transparent;
+    width: 96vw;
+    height: 30px;
+    position: fixed;
+
+    top: 30px;
+    left: 2vw;
+    z-index: 1;
+}
+
+
+.big_square {
+    background-color: #71c186;
+    height: 50vh;
+    border: 1px solid black
+}
+
+.middle_square {
+    background-color: #9185A7;
+    height: 40vh;
+    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border: 1px solid black
+}
+
+.side_comment {
+    height: 15vh;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 0 0 15px;
+
+    font-size: 22px;
+    font-family: 'GangwonEdu_OTFBoldA';
+    /* font-weight: bold; */
+}
+
+.small_square {
+    background-color: #71c186;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: row;   
+}
+
+.small_square button {
+    border: black solid 1px;
+    width: 33vw;
+
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+.small_square button:hover {
+    background-color: #9185A7;
+    color: black;
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    width: 250px;
+    height: 50px;
+}
+
+.input_flex {
+    display : flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.btn-outline-dark {
+    height: 100px;
+}
+
+.signin_box {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.signin_logintext{
+    font-family: 'HS-Regular';
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    /* text-shadow: 1px 1px 1px gray; */
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.signin_logintext h3 {
+    font-size: 40px;
+}
+
+.top {
+    display : flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.loginbutton {
+    background: 519D9E;
+    border-radius: 8px;
+    width: 160px;
+    height: 60px;
+    margin: 10px 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px
+    , rgba(0, 0, 0, 0.25) 0px 2px 2px 0px;
+    font-size: 20px;
+    color: black;
+    -webkit-text-stroke: 0.2px black;
+}
+
+.signupbutton{
+    background: rgb(252, 231, 51);
+    border-radius: 8px;
+    width: 160px;
+    height: 60px;
+    margin: 10px 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 2px 0px
+    , rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+    font-size: 20px;
+    color: black;
+    -webkit-text-stroke: 0.2px black;
+}
+
+.top span {
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    /* text-shadow: 1px 1px 1px gray; */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.big_square img{
+    padding: 130px 0 0 85px;
+}
+
+.btn-outline-success {
+    border-radius: 1px;
+}
+
+.index_image {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+}
+.mean_list {
+    display: flex;
+    flex-direction: row;
+    
+}
+.gomunity_mean {
+    font-size: 16px;
+}
+.gomunity_manual {
+    font-size: 16px;
+}
+.name_list {
+    /* text-decoration: underline; */
+    /* font-size: 3rem; */
+    font-size: 70px;
+    margin-top: 20px;
+    color: #71c186;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: black;
+    font-weight: bolder;
+}
+.gomunity_image {
+    width: 360px;
+    height: 360px;
+
+}
+p {
+    font-size: 19px;
+}
+
+input::placeholder {
+    color: white;
+}
+input:focus-visible {
+    outline: 0px;
+}
+
+.text-box {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.highlight-line1 {
+    background:linear-gradient(to top, #abc9ff 50%, transparent 50%);
+}
+
+.highlight-line2 {
+    background:linear-gradient(to top, rgb(195, 172, 236) 30%, transparent 50%);
+}
+
+.highlight-line3 {
+    background:linear-gradient(to top, rgb(191, 237, 191) 30%, transparent 50%);
+}
