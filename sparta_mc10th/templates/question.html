@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="../static/style2.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./../static/favicon.png" />
+    <!--    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>보드게임 추천-Handmade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic+Coding&family=Poor+Story&display=swap"
+      rel="stylesheet"
+    />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+      let player = "";
+      let age = "";
+      let genre = "";
+      let time = "";
+
+      // 선택된 값 저장하는 함수
+      $(document).ready(function () {
+        $(".menu").click(function () {
+          const index = $(this).attr("menu-index");
+          // console.log(index);
+          if (index === "0") player = 2;
+          else if (index === "1") player = 4;
+          else if (index === "2") player = 6;
+          else if (index === "3") player = 8;
+          // console.log(player);
+        });
+
+        $(".menu1").click(function () {
+          const index = $(this).attr("menu-index");
+          // console.log(index);
+          if (index === "0") age = [3, 11];
+          else if (index === "1") age = [12, 14];
+          else if (index === "2") age = [15, 19];
+          else if (index === "3") age = [20, 100];
+          // console.log(age);
+        });
+
+        $(".menu2").click(function () {
+          const index = $(this).attr("menu-index");
+          // console.log(index);
+          if (index === "0") genre = "전략";
+          else if (index === "1") genre = "가족";
+          else if (index === "2") genre = "퍼즐";
+          else if (index === "3") genre = "카드";
+          // console.log(genre);
+        });
+
+        $(".menu3").click(function () {
+          const index = $(this).attr("menu-index");
+          // console.log(index);
+          if (index === "0") time = [10, 29];
+          else if (index === "1") time = [30, 59];
+          else if (index === "2") time = [60, 89];
+          else if (index === "3") time = [90, 1000];
+          // console.log(time);
+        });
+      });
+
+      // 클린된 값 css설정을 위한 함수(클래스, 속성추가)
+      $(document).ready(function () {
+        $(".menu")
+          .each(function (index) {
+            $(this).attr("menu-index", index);
+          })
+          .click(function () {
+            var index = $(this).attr("menu-index");
+            $(".menu[menu-index=" + index + "]").addClass("clicked_menu");
+            $(".menu[menu-index!=" + index + "]").removeClass("clicked_menu");
+          });
+      });
+
+      $(document).ready(function () {
+        $(".menu1")
+          .each(function (index) {
+            $(this).attr("menu-index", index);
+          })
+          .click(function () {
+            var index = $(this).attr("menu-index");
+            $(".menu1[menu-index=" + index + "]").addClass("clicked_menu");
+            $(".menu1[menu-index!=" + index + "]").removeClass("clicked_menu");
+          });
+      });
+
+      $(document).ready(function () {
+        $(".menu2")
+          .each(function (index) {
+            $(this).attr("menu-index", index);
+          })
+          .click(function () {
+            var index = $(this).attr("menu-index");
+            $(".menu2[menu-index=" + index + "]").addClass("clicked_menu");
+            $(".menu2[menu-index!=" + index + "]").removeClass("clicked_menu");
+          });
+      });
+
+      $(document).ready(function () {
+        $(".menu3")
+          .each(function (index) {
+            $(this).attr("menu-index", index);
+          })
+          .click(function () {
+            var index = $(this).attr("menu-index");
+            $(".menu3[menu-index=" + index + "]").addClass("clicked_menu");
+            $(".menu3[menu-index!=" + index + "]").removeClass("clicked_menu");
+          });
+      });
+
+      // 결과확인 버튼을 눌렀을 때 결과페이지로 이동하는 함수
+      function showResult() {
+        // console.log(player, age, genre, time);
+        if (player && age && genre && time) {
+          document.location.href = `/result?player=${player}&age=${age}&genre=${genre}&time=${time}`;
+        } else {
+          Swal.fire({
+            title: "모든 질문에 답해주세요!",
+            text: "",
+            icon: "warning",
+            confirmButtonText: "ok",
+          });
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <img
+        onclick="document.location.href='/'"
+        class="banner-img"
+        src="./../static/banner.png"
+        alt="배너"
+      />
+    </header>
+    <section class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+    <div id="title">
+      <h1 class="result-sentence">
+        <span>나</span>
+        <span>만</span>
+        <span>의</span>
+        <span>골</span>
+        <span>라</span>
+        <span>보</span>
+        <span>드</span>
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/3292/3292072.png"
+          width="70"
+          height="70"
+        />
+      </h1>
+    </div>
+
+    <div id="main">
+      <div class="wrap_box">
+        <div class="boxes">
+          <div class="box">
+            <div class="questions_box">
+              <h2>
+                <img
+                  class="images"
+                  src="https://cdn-icons-png.flaticon.com/128/6770/6770295.png"
+                  width="60"
+                  height="60"
+                />
+                플레이어는 몇 명?
+              </h2>
+            </div>
+            <div class="menu">2명</div>
+            <div class="menu">4명</div>
+            <div class="menu">6명</div>
+            <div class="menu">8명이상</div>
+          </div>
+          <div class="box1">
+            <div class="questions_box">
+              <h2>
+                <img
+                  class="images"
+                  src="https://cdn-icons-png.flaticon.com/128/6770/6770339.png"
+                  width="60"
+                  height="60"
+                />
+                원하는 게임 연령은?
+              </h2>
+            </div>
+            <div class="menu1">어린이</div>
+            <div class="menu1">12세</div>
+            <div class="menu1">15세</div>
+            <div class="menu1">성인</div>
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="box2">
+            <div class="questions_box">
+              <h2>
+                <img
+                  class="images"
+                  src="https://cdn-icons-png.flaticon.com/128/6770/6770285.png"
+                  width="60"
+                  height="60"
+                />
+                원하는 장르는?
+              </h2>
+            </div>
+            <div class="menu2">전략</div>
+            <div class="menu2">가족</div>
+            <div class="menu2">퍼즐</div>
+            <div class="menu2">카드</div>
+          </div>
+          <div class="box3">
+            <div class="questions_box">
+              <h2>
+                <img
+                  class="images"
+                  src="https://cdn-icons-png.flaticon.com/128/6770/6770242.png"
+                  width="60"
+                  height="60"
+                />
+                원하는 플레이 타임은?
+              </h2>
+            </div>
+            <div class="menu3">10min</div>
+            <div class="menu3">30min</div>
+            <div class="menu3">60min</div>
+            <div class="menu3">90min</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <button class="btn hover1" onclick="showResult()">결과 확인</button>
+    </div>
+  </body>
+</html>
