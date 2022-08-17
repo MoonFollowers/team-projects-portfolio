@@ -1,0 +1,135 @@
+<!-- main html -->
+<!-- main html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/font.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://kit.fontawesome.com/0e01622099.js" crossorigin="anonymous"></script>
+    <title>메인페이지 | 가제</title>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <div id="loadingimage" class="loadingimage">
+        <img src="./image/loading2.gif" alt="">
+    </div> 
+    <div class="main_bg">
+        <!-- 네비게이션바 -->
+        <nav id="nav" class="nav">
+            <div class="logo"><i class="fa-solid fa-palette"></i><span>유전</span></div>
+            <div id="menu_icon" class="menu_icon">
+                <div id="welcome_user">
+                    <span>황리</span>와 아이들
+                </div>
+                <div>
+                    <i style="font-size:25px; color:#ff0000;" class="fa-solid fa-crown"></i>
+                </div>
+                <div>
+                    <i style="font-size:25px;" class="fa-solid fa-comment-dots"></i>
+                </div>
+                <div class="user_info">
+                    <i style="font-size:25px; color:#FFC4C4" id="user_info" class="fa-solid fa-user"></i>
+                    <div id="user_menu" class="user_menu">
+                        <div>1000P</div>
+                        <div onclick="user_collection()">컬렉션</div>
+                        <div onclick="logout()">로그아웃</div>
+                    </div>
+                </div>
+
+                <div onclick="img_upload_button()">
+                    <i style="font-size:25px;" class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+            </div>
+        </nav>
+        <!--  -->
+
+        <!-- 업로드 모달 창 -->
+        <div class="upload_modal" id="upload_modal_box">
+            <div id="not_img_upload" class="not_img_upload">
+                이미지를 선택해 주세요!
+            </div>
+            <div class="upload_modal_box">
+                <input type="file" id="upload_file" hidden>
+                <button id="upload_btn" class="upload_btn" onclick="img_upload()">업로드</button>
+                <img src="" class="upload_img" id="upload_img" alt="">
+                <button onclick="img_upload_submit()" class="img_upload_submit" id="img_upload_submit"><i
+                        class="fa-solid fa-check"></i></button>
+                <button onclick="img_upload_cancel()" class="img_upload_cancel" id="img_upload_cancel"><i
+                        class="fa-solid fa-ban"></i></button>
+            </div>
+            <div id="info_input_box" class="info_input_box">
+                <button onclick="image_upload()">전송</button>
+                <input id="info_title" placeholder="제목">
+                <textarea id="info_desc" placeholder="설명"></textarea>
+                <input onkeydown="image_upload_enter(this)" value="3" readonly="readonly" id="info_cost" placeholder="가격">
+                <button onclick="image_upload()">전송</button>
+                <div class="info_radio_button">
+                    <input type="radio" id="is_exposure" name="is_exposure" value=True hidden>
+                    <label for="is_exposure">지금 게시</label>
+                    <input type="radio" id="is_not_mine" name="is_exposure" value=False hidden>
+                    <label for="is_not_mine">일단 보관</label>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 상세 페이지 모달 -->
+        <div class="detail_modal" id="detail_modal">
+
+            <div id="detail_modal_box" class="detail_modal_box popup">
+
+                <div class="detail_modal_close" onclick="detail_modal_close()"><i class="fa-solid fa-circle-xmark"></i>
+                </div>
+
+                <div class="detail_img">
+                    <img src="https://m.picturemall.co.kr/web/product/big/202011/954895d4a7b72f170d2d612d5b23f3ae.jpg"
+                        alt="" srcset="">
+                </div>
+                <div class="detail_info">
+                    <div class="detail_artist">Artist<span>황영상</span></div>
+                    <div class="detail_desc">어렸을적 함께 떠난 당신과 추억하여, 남긴 그림...님은 갔지만 저는 이미 코딩에 빠져서 헤어 나올수가 없습니다. 전 외롭지 않습니다.
+                        ㅋㅋㅋㅋ</div>
+                    <div class="detail_bottom">
+                        <div class="detail_buy">
+                            100포인트 바로 구매!
+                        </div>
+                        <div class="detail_like">
+                            <i class="fa-solid fa-heart"></i>
+                            70
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--  -->
+
+
+
+
+    </div>
+
+
+
+
+    <!-- 메인 이미지 리스트  -->
+    <div class="main_box">
+        <div class="paint">
+            <div id="paint_list" class="paint_list">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./scripts/api.js"></script>
+    <script src="./scripts/main.js"></script>
+
+</body>
+
+</html>
