@@ -4,7 +4,7 @@
 
 ## 프로젝트 소개
 
-![gomunity_og.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/89c09a05-4509-48f6-b642-fe0fcf6354a6/gomunity_og.png)
+![gomunity_og](https://user-images.githubusercontent.com/97969957/185279549-76daa3f9-50dc-4eb7-b412-2f9faec1c2b3.png)
 
 - 거뮤니티는 초보 개발자들이 모여 거리낌없이 질문하고 답변하면서 어려운 점을 해소하기 위한 웹 프로젝트입니다.
 - 개발자는 구글링을 통해 자신이 가지고 있는 이슈와 비슷한 케이스를 찾고 트러블 슈팅하게 되지만 초보 개발자는 익숙하지 않아 쉽지 않습니다. 스택오버플로우 또한 마찬가지입니다.
@@ -19,6 +19,7 @@
 ## 서버
 
 - Python
+<img src="https://img.shields.io/badge/Python-#3776AB?style=for-the-badge&logo=python&logoColor=white">
 - Django
 - DjangoRestFramework
 
@@ -67,7 +68,7 @@
 
 ## ERD
 
-![Gomunity.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8f4cb83e-9890-4793-9341-46c729bba4b5/Gomunity.png)
+![Gomunity](https://user-images.githubusercontent.com/97969957/185279528-d655226f-7584-4f3c-a856-aca00f42db00.png)
 
 - 거뮤니티는 크게 세 가지로 나누어진 기능의 테이블로 작성되어 있습니다.
     - 회원 모델
